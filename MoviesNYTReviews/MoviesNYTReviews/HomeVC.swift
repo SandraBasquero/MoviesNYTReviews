@@ -20,8 +20,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         self.tableMovies.delegate = self
         self.tableMovies.dataSource = self
     }
-
-    
     
     // MARK: - Movies TableView
     
@@ -41,8 +39,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         
         //if (currentRecipes.count != 0){
             //let recipe = 3
-            cell.titleMovie.text = "lalala yeah"
-            cell.subtitleMovie.text = "sub lalalla"
+            cell.titleMovie.text = "lalala yeah \(indexPath[1]+1)"
+            cell.subtitleMovie.text = "sub lalalla \(indexPath[1]+1)"
             
             
             /*DispatchQueue.global().async {
@@ -58,15 +56,29 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         return cell
     }
 
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("select row \(indexPath[1])")
+        let currentCell = tableView.cellForRow(at: indexPath)! as! MovieListCell
+        print("select row \(currentCell.titleMovie.text)")
+        performSegue(withIdentifier: "toDetailSegue", sender: currentCell)
     }
-    */
+    
+    
+    
+    // MARK: - Navigation
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+        
+        if segue.identifier == "toDetailSegue" {
+            if let viewController = segue.destination as? DetailVC {
+                let cellSel: MovieListCell = sender as! MovieListCell
+                viewController.navigationItem.title = cellSel.titleMovie.text
+                viewController.subtitleFromList = cellSel.subtitleMovie.text
+            }
+        }
+    }
 
 }
