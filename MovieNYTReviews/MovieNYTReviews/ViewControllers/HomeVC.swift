@@ -16,6 +16,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     
     
     override func viewDidLoad() {
+        
+        ApiManager().getTest()
+        
         super.viewDidLoad()
         
         self.searchBar.delegate = self
