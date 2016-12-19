@@ -8,29 +8,34 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON //In Terminal to fix error: carthage update --platform iOS --no-use-binaries
 
 class ApiManager: NSObject {
     
     func getTest() {
-        //var myJson:Dictionary<String, Any>
+        //var myJson:Data = Data()
         Alamofire.request("https://api.nytimes.com/svc/movies/v2/reviews/search.json?&api-key=0f74e88f53854f4687876afdb617a208").responseJSON { response in
             /*print(response.request as Any)  // original URL request
             print(response.response as Any) // HTTP URL response
             print(response.data as Any)     // server data
             print(response.result)   // result of response serialization*/
             
-            if let JSON = response.result.value {
-                print("JSON: \(JSON)")
-              //  myJson = JSON as! Dictionary<String, Any>
+            if let JSONN = response.result.value {
+                print("JSON: \(JSONN)")
+                //myJson = JSON as! Data
+                let myJson = JSON(JSONN)
+                /*if let userName = myJson[0][0][0] {
+                    print(userName)
+                }*/
             }
         }
         
-        
-       /* if let statusesArray = try? JSONSerialization.jsonObject(with: myJson, options: .allowFragments) as? [[String: Any]],
-            let user = statusesArray[0]["user"] as? [String: Any],
-            let username = user["name"] as? String {
-            // Finally we got the username
+     /*   let json = JSON(data: myJson)
+        if json[0]["display_title"].string != nil {
+            //Now you got your value
+            print(json[0]["display_title"].string!)
         }*/
+        
     }
     
 }

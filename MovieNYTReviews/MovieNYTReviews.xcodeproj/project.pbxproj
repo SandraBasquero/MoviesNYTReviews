@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B6EF7F0F1E06932200DA796F /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EF7F0E1E06932200DA796F /* ApiManager.swift */; };
+		EB0B378E1E07F4A000A60FC0 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F51E0169A100C99070 /* SwiftyJSON.framework */; };
+		EB0B378F1E07F4A000A60FC0 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F51E0169A100C99070 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBD235E21E01612D00C99070 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD235E11E01612D00C99070 /* HomeVC.swift */; };
 		EBD235F61E0169A100C99070 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F41E0169A100C99070 /* Alamofire.framework */; };
 		EBD235F71E0169A100C99070 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F41E0169A100C99070 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EBD235F81E0169A100C99070 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F51E0169A100C99070 /* SwiftyJSON.framework */; };
-		EBD235F91E0169A100C99070 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F51E0169A100C99070 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EBD235FB1E016E2700C99070 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD235FA1E016E2700C99070 /* MovieListCell.swift */; };
 		EBD235FD1E016F4000C99070 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD235FC1E016F4000C99070 /* DetailVC.swift */; };
 		EBE4627E1E01491300ADF6C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4627D1E01491300ADF6C1 /* AppDelegate.swift */; };
@@ -48,7 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EBD235F91E0169A100C99070 /* SwiftyJSON.framework in Embed Frameworks */,
+				EB0B378F1E07F4A000A60FC0 /* SwiftyJSON.framework in Embed Frameworks */,
 				EBD235F71E0169A100C99070 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBD235F81E0169A100C99070 /* SwiftyJSON.framework in Frameworks */,
+				EB0B378E1E07F4A000A60FC0 /* SwiftyJSON.framework in Frameworks */,
 				EBD235F61E0169A100C99070 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,7 +255,7 @@
 				TargetAttributes = {
 					EBE462791E01491300ADF6C1 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GKD62JWZ34;
+						DevelopmentTeam = S9U63P9Q69;
 						ProvisioningStyle = Automatic;
 					};
 					EBE462901E01491300ADF6C1 = {
@@ -479,7 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GKD62JWZ34;
+				DEVELOPMENT_TEAM = S9U63P9Q69;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -498,7 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GKD62JWZ34;
+				DEVELOPMENT_TEAM = S9U63P9Q69;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
