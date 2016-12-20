@@ -13,9 +13,11 @@ import SwiftyJSON //In Terminal to fix error: carthage update --platform iOS --n
 
 class ApiManager: NSObject {
     
+    let apiKey:String = "0f74e88f53854f4687876afdb617a208"
+    
     func getTest() {
        // var myJson:[String: Any]?
-        Alamofire.request("https://api.nytimes.com/svc/movies/v2/reviews/search.json?&api-key=0f74e88f53854f4687876afdb617a208").responseJSON { response in
+        Alamofire.request("https://api.nytimes.com/svc/movies/v2/reviews/search.json?&api-key="+apiKey).responseJSON { response in
             
             if let JSONN = response.result.value as? [String: Any] {
                 //print("JSON: \(JSONN["results"])")
@@ -23,6 +25,7 @@ class ApiManager: NSObject {
                 //print(resultss[0])
                 let dictio:NSDictionary = resultss[0] as! NSDictionary
                 print(dictio.value(forKey: "display_title")!)
+                print(dictio.value(forKey: "opening_date")!)
             }
         }
     }
