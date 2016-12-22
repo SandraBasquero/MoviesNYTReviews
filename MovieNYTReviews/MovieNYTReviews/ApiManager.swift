@@ -21,8 +21,15 @@ class ApiManager: NSObject {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
+                //print(json)
+                let more = json["has_more"]
+                let numForPage = json["num_results"]
+                print("--- \(numForPage) movies showed. Are there more? \(more) ---")
                 let results = json["results"].arrayValue
-                print("\(results[0]["display_title"].stringValue)")
+                //print("\(results[0]["display_title"].stringValue)")
+                for movie in results {
+                    print(movie["display_title"])
+                }
             case .failure(let error):
                 print(error)
             }
