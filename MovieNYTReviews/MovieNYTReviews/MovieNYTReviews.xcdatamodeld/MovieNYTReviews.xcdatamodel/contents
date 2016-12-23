@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Movie" representedClassName="Movie" syncable="YES" codeGenerationType="class">
-        <attribute name="article_url" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
-        <attribute name="publication_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="headline" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="multimedia" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="publicationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="summaryShort" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Movie" positionX="-63" positionY="-18" width="128" height="135"/>
