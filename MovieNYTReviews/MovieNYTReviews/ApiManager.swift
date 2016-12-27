@@ -10,15 +10,18 @@ import UIKit
 import Foundation
 import Alamofire
 import SwiftyJSON //In Terminal to fix error: carthage update --platform iOS --no-use-binaries
-/*import DATAStack
-import Sync*/
+import DATAStack
+import Sync
+import CoreData
+
+
 
 class ApiManager: NSObject {
     
     let apiKey:String = "0f74e88f53854f4687876afdb617a208"
-    //let dataStack: DATAStack = DATAStack()
     
     func getTest() {
+        
         let url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?&api-key="+apiKey
         Alamofire.request(url, method: .get).validate().responseJSON { response in
             switch response.result {
@@ -39,6 +42,41 @@ class ApiManager: NSObject {
                 print(error)
             }
         }
+        
+        storeTranscription()
+        
     }
     
+  
+    // MARK: -------
+    
+    func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+    
+    func storeTranscription() {
+        let context = getContext()
+        
+        //retrieve the entity that we just created
+        let entity =  NSEntityDescription.entity(forEntityName: "Movie", in: context)
+        
+        let transc = NSManagedObject(entity: entity!, insertInto: context)
+        
+        //set the entity values
+        transc.setValue("Blade Runner", forKey: "displayTitle")
+        transc.setValue("The science fiction film!", forKey: "headline")
+        
+        //save the object
+        do {
+            try context.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+    }
+
 }
