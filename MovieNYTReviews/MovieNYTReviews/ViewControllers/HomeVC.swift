@@ -13,18 +13,30 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableMovies: UITableView!
-    
+    var jsonPagin = 20
+    var morePagesMovie = true
     
     override func viewDidLoad() {
-        
-        ApiManager().getTest()
-        
         super.viewDidLoad()
+        
+        ApiManager.sharedInstance.getJSONs(jsonPagin)
+
+       /* ApiManager.sharedInstance.hasMoreResults(self.jsonPagin, remoteHandler: {
+            more in
+            self.morePagesMovie = more!
+            self.jsonPagin = self.jsonPagin + 20
+            print(self.jsonPagin)
+            if self.morePagesMovie {
+                ApiManager.sharedInstance.getJSONs(self.jsonPagin)
+            }
+        })*/
+        
         
         self.searchBar.delegate = self
         self.tableMovies.delegate = self
         self.tableMovies.dataSource = self
     }
+    
     
     // MARK: - Movies TableView
     

@@ -63,7 +63,6 @@ class CoreDataManager: NSObject {
         
         do {
         let searchResults = try getContext().fetch(fetchRequest)
-        print(searchResults.count)
             exist = (searchResults.count == 0) ? false : true
         } catch {
             print("Error with request: \(error)")
