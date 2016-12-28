@@ -14,6 +14,7 @@
 		EB07B4151E0D30DE003987EF /* SYNCPropertyMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB07B4131E0D30DE003987EF /* SYNCPropertyMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB0B378E1E07F4A000A60FC0 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F51E0169A100C99070 /* SwiftyJSON.framework */; };
 		EB0B378F1E07F4A000A60FC0 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F51E0169A100C99070 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB10A3891E13D4EB0068FA17 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB10A3881E13D4EB0068FA17 /* CoreDataManager.swift */; };
 		EBD235E21E01612D00C99070 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD235E11E01612D00C99070 /* HomeVC.swift */; };
 		EBD235F61E0169A100C99070 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F41E0169A100C99070 /* Alamofire.framework */; };
 		EBD235F71E0169A100C99070 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBD235F41E0169A100C99070 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -66,6 +67,7 @@
 		B6EF7F0E1E06932200DA796F /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = MovieNYTReviews/ApiManager.swift; sourceTree = SOURCE_ROOT; };
 		EB07B4101E0D30C9003987EF /* DATAStack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DATAStack.framework; path = Carthage/Build/iOS/DATAStack.framework; sourceTree = "<group>"; };
 		EB07B4131E0D30DE003987EF /* SYNCPropertyMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SYNCPropertyMapper.framework; path = Carthage/Build/iOS/SYNCPropertyMapper.framework; sourceTree = "<group>"; };
+		EB10A3881E13D4EB0068FA17 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = MovieNYTReviews/CoreDataManager.swift; sourceTree = SOURCE_ROOT; };
 		EBD235E11E01612D00C99070 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EBD235F41E0169A100C99070 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		EBD235F51E0169A100C99070 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				B6EF7F0E1E06932200DA796F /* ApiManager.swift */,
+				EB10A3881E13D4EB0068FA17 /* CoreDataManager.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				EBE4627E1E01491300ADF6C1 /* AppDelegate.swift in Sources */,
 				EBD235FB1E016E2700C99070 /* MovieListCell.swift in Sources */,
 				B6EF7F0F1E06932200DA796F /* ApiManager.swift in Sources */,
+				EB10A3891E13D4EB0068FA17 /* CoreDataManager.swift in Sources */,
 				EBE462861E01491300ADF6C1 /* MovieNYTReviews.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

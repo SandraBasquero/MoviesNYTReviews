@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import Alamofire
 import SwiftyJSON //In Terminal to fix error: carthage update --platform iOS --no-use-binaries
-import DATAStack
+//import DATAStack
 import Sync
 import CoreData
 
@@ -19,7 +19,6 @@ import CoreData
 class ApiManager: NSObject {
     
     let apiKey:String = "0f74e88f53854f4687876afdb617a208"
-    var movieTest:Array<Any> = []
     
     func getTest() {
         
@@ -38,9 +37,8 @@ class ApiManager: NSObject {
                 
                 for movie in results {
                     print(movie["display_title"])
+                    self.storeTranscription(movie)
                 }
-                
-                self.storeTranscription(results[0])
                 
             case .failure(let error):
                 print(error)
@@ -70,7 +68,7 @@ class ApiManager: NSObject {
         
         print(movieTest)
         
-        transc.hyp_fill(with: movieTest.dictionaryObject!)
+        transc.hyp_fill(with: movieTest.dictionaryObject!) //Sync framework
         
         //set the entity values
         //transc.setValue("Blade Runner", forKey: "displayTitle")
@@ -103,6 +101,10 @@ class ApiManager: NSObject {
             for trans in searchResults as [NSManagedObject] {
                 //get the Key Value pairs (although there may be a better way to do that...
                 print("\(trans.value(forKey: "displayTitle"))")
+                
+                let expenses = NSKeyedUnarchiver.unarchiveObject(with: trans.value(forKey: "link") as! Data)
+                var aa = expenses as! Dictionary<String, Any>
+                print(aa.removeValue(forKey: "url")!)
             }
         } catch {
             print("Error with request: \(error)")
