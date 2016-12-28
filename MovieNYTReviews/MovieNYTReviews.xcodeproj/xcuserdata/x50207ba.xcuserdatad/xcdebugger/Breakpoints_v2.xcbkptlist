@@ -2,4 +2,86 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieNYTReviews/CoreDataManager.swift"
+            timestampString = "504622777.507105"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "movieAlreadyInLocal(newTitle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieNYTReviews/CoreDataManager.swift"
+            timestampString = "504622777.507105"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "movieAlreadyInLocal(newTitle:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieNYTReviews/CoreDataManager.swift"
+            timestampString = "504622397.472108"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "movieAlreadyInLocal(newTitle:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieNYTReviews.CoreDataManager.movieAlreadyInLocal (newTitle : Swift.String) -&gt; ()"
+                  moduleName = "MovieNYTReviews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/x50207ba/Formacio%CC%81n/MoviesNYTReviews/MovieNYTReviews/MovieNYTReviews/CoreDataManager.swift"
+                  timestampString = "504622425.102966"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1084">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieNYTReviews.CoreDataManager.movieAlreadyInLocal (newTitle : Swift.String) -&gt; ()"
+                  moduleName = "MovieNYTReviews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/x50207ba/Formacio%CC%81n/MoviesNYTReviews/MovieNYTReviews/MovieNYTReviews/CoreDataManager.swift"
+                  timestampString = "504622425.104499"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1105">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

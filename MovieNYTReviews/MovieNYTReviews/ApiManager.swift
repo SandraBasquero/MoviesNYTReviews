@@ -37,7 +37,9 @@ class ApiManager: NSObject {
                 
                 for movie in results {
                     print(movie["display_title"])
-                    self.storeTranscription(movie)
+                    if (!CoreDataManager.sharedInstance.movieAlreadyInLocal(newTitle: movie["display_title"].stringValue)) {
+                        CoreDataManager.sharedInstance.saveData(movie)   
+                    }
                 }
                 
             case .failure(let error):
@@ -45,70 +47,6 @@ class ApiManager: NSObject {
             }
         }
         
-    }
-    
-  
-    // MARK: -------
-    
-    func getContext () -> NSManagedObjectContext {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.persistentContainer.viewContext
-    }
-    
-    
-    func storeTranscription(_ movieTest:JSON) {
-        
-        //SAVE IN DB 
-        
-        let context = getContext()
-        //retrieve the entity that we just created
-        let entity =  NSEntityDescription.entity(forEntityName: "Movie", in: context)
-        
-        let transc = NSManagedObject(entity: entity!, insertInto: context)
-        
-        print(movieTest)
-        
-        transc.hyp_fill(with: movieTest.dictionaryObject!) //Sync framework
-        
-        //set the entity values
-        //transc.setValue("Blade Runner", forKey: "displayTitle")
-        //transc.setValue("The science fiction film!", forKey: "headline")
-        
-        //save the object
-        do {
-            try context.save()
-            print("saved!")
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        } catch {
-            
-        }
-        
-        
-        //QUERY DB
-        
-        //create a fetch request, telling it about the entity
-        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
-        
-        do {
-            //go get the results
-            let searchResults = try getContext().fetch(fetchRequest)
-            
-            //I like to check the size of the returned results!
-            print ("num of results = \(searchResults.count)")
-            
-            //You need to convert to NSManagedObject to use 'for' loops
-            for trans in searchResults as [NSManagedObject] {
-                //get the Key Value pairs (although there may be a better way to do that...
-                print("\(trans.value(forKey: "displayTitle"))")
-                
-                let expenses = NSKeyedUnarchiver.unarchiveObject(with: trans.value(forKey: "link") as! Data)
-                var aa = expenses as! Dictionary<String, Any>
-                print(aa.removeValue(forKey: "url")!)
-            }
-        } catch {
-            print("Error with request: \(error)")
-        }
     }
 
 }
