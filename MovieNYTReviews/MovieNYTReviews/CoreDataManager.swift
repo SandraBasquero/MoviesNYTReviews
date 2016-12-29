@@ -62,7 +62,7 @@ class CoreDataManager: NSObject {
     
     func movieAlreadyInLocal(newTitle:String) -> Bool {
         var exist = false
-        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest() //Entity
         fetchRequest.predicate = NSPredicate(format: "displayTitle == %@", newTitle)
         
         do {

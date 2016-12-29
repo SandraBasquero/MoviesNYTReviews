@@ -10,7 +10,6 @@ import UIKit
 import Foundation
 import Alamofire
 import SwiftyJSON //In Terminal to fix error: carthage update --platform iOS --no-use-binaries
-//import DATAStack
 import Sync
 import CoreData
 
@@ -50,6 +49,7 @@ class ApiManager: NSObject {
         }
     }
     
+    /*
     func hasMoreResults(_ page:Int, remoteHandler: @escaping (Bool?) -> Void) {
         let url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?&api-key="+apiKey+"&offset="+String(page)
         
@@ -65,6 +65,6 @@ class ApiManager: NSObject {
                 remoteHandler(false)
             }
         }
-    }
+    }*/
 
 }
