@@ -8,13 +8,14 @@
 
 import UIKit
 import CoreData
+import Sync
 
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableMovies: UITableView!
-    var jsonPagin = 20
+    var jsonPagin = 0
     var morePagesMovie = true
     var moviesArrayResult:[NSManagedObject] = []
     
@@ -24,6 +25,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         self.searchBar.delegate = self
         self.tableMovies.delegate = self
         self.tableMovies.dataSource = self
+        tableMovies.isScrollEnabled = false
         
         ApiManager.sharedInstance.getJSONs(jsonPagin, remoteHandler: {
             success in
@@ -33,6 +35,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
                 self.moviesArrayResult = CoreDataManager.sharedInstance.getAllTheMovies()
                 print(self.moviesArrayResult)
                 self.tableMovies.reloadData()
+                self.tableMovies.isScrollEnabled = true
             } else {
                 print("Error")
             }
@@ -43,35 +46,33 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     // MARK: - Movies TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        /*if currentRecipes.count != 0{
-         return currentRecipes.count
-         }else{
-         return 0
-         }*/
-        return jsonPagin //number of table rows
+        if moviesArrayResult.count != 0{
+            return moviesArrayResult.count
+        }else{
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieListCell
-    
+        //print(indexPath.row)
         if moviesArrayResult.count > 0 {
             cell.titleMovie.text = moviesArrayResult[indexPath.row].value(forKey: "displayTitle") as! String?
             cell.subtitleMovie.text = moviesArrayResult[indexPath.row].value(forKey: "headline") as! String?
+            
+            DispatchQueue.global().async {
+                let multi = NSKeyedUnarchiver.unarchiveObject(with: self.moviesArrayResult[indexPath.row].value(forKey: "multimedia") as! Data)
+                var source = multi as! Dictionary<String, Any>
+                let url:URL = URL(string: source["src"] as! String)!
+                
+                if let data = NSData(contentsOf: url){
+                    DispatchQueue.main.async {
+                        cell.imageMovie.image = UIImage(data: data as Data)
+                        self.tableMovies.isScrollEnabled = true
+                    }
+                }
+            }
         }
-        
-        
-        /*DispatchQueue.global().async {
-         let imgURL: URL = URL(string: recipe.image!)!
-         if let data = NSData(contentsOf: imgURL){
-         DispatchQueue.main.async {
-         cell.recipeImage.image = UIImage(data: data as Data)
-         }
-         }
-         }*/
-        
-        //}
         return cell
     }
     

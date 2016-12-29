@@ -45,11 +45,11 @@ class CoreDataManager: NSObject {
             //You need to convert to NSManagedObject to use 'for' loops
             for trans in searchResults as [NSManagedObject] {
                 //get the Key Value pairs (although there may be a better way to do that...
-                print("\(trans.value(forKey: "displayTitle"))")
                 
-                let expenses = NSKeyedUnarchiver.unarchiveObject(with: trans.value(forKey: "link") as! Data)
+                /*print("\(trans.value(forKey: "displayTitle"))")
+                let expenses = NSKeyedUnarchiver.unarchiveObject(with: trans.value(forKey: "multimedia") as! Data)
                 var aa = expenses as! Dictionary<String, Any>
-                print(aa.removeValue(forKey: "url")!)
+                print(aa["src"]!)*/
                 
                 moviesArray.append(trans)
             }
