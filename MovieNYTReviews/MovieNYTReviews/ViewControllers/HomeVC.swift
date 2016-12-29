@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
@@ -15,26 +16,27 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     @IBOutlet weak var tableMovies: UITableView!
     var jsonPagin = 20
     var morePagesMovie = true
+    var moviesArrayResult:[NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ApiManager.sharedInstance.getJSONs(jsonPagin)
-
-       /* ApiManager.sharedInstance.hasMoreResults(self.jsonPagin, remoteHandler: {
-            more in
-            self.morePagesMovie = more!
-            self.jsonPagin = self.jsonPagin + 20
-            print(self.jsonPagin)
-            if self.morePagesMovie {
-                ApiManager.sharedInstance.getJSONs(self.jsonPagin)
-            }
-        })*/
-        
-        
         self.searchBar.delegate = self
         self.tableMovies.delegate = self
         self.tableMovies.dataSource = self
+        
+        ApiManager.sharedInstance.getJSONs(jsonPagin, remoteHandler: {
+            success in
+            let s = success
+            if s! {
+                print("Filling array")
+                self.moviesArrayResult = CoreDataManager.sharedInstance.getAllTheMovies()
+                print(self.moviesArrayResult)
+                self.tableMovies.reloadData()
+            } else {
+                print("Error")
+            }
+        })
     }
     
     
@@ -47,17 +49,17 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
          }else{
          return 0
          }*/
-        return 3 //number of table rows
+        return jsonPagin //number of table rows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieListCell
-        
-        //if (currentRecipes.count != 0){
-        //let recipe = 3
-        cell.titleMovie.text = "lalala yeah \(indexPath[1]+1)"
-        cell.subtitleMovie.text = "sub lalalla \(indexPath[1]+1)"
+    
+        if moviesArrayResult.count > 0 {
+            cell.titleMovie.text = moviesArrayResult[indexPath.row].value(forKey: "displayTitle") as! String?
+            cell.subtitleMovie.text = moviesArrayResult[indexPath.row].value(forKey: "headline") as! String?
+        }
         
         
         /*DispatchQueue.global().async {

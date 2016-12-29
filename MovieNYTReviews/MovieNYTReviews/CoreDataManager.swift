@@ -31,8 +31,9 @@ class CoreDataManager: NSObject {
     // MARK: CoreData queries
     //*********************************************************
     
-    func getAllTheMovies() {
+    func getAllTheMovies() -> [NSManagedObject] {
         let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+        var moviesArray:[NSManagedObject] = []
         
         do {
             //go get the results
@@ -49,10 +50,13 @@ class CoreDataManager: NSObject {
                 let expenses = NSKeyedUnarchiver.unarchiveObject(with: trans.value(forKey: "link") as! Data)
                 var aa = expenses as! Dictionary<String, Any>
                 print(aa.removeValue(forKey: "url")!)
+                
+                moviesArray.append(trans)
             }
         } catch {
             print("Error with request: \(error)")
         }
+        return moviesArray
     }
     
     

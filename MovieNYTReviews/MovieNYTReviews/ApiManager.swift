@@ -25,7 +25,7 @@ class ApiManager: NSObject {
     var morePages = true
     
     
-    func getJSONs(_ pagin:Int) {
+    func getJSONs(_ pagin:Int, remoteHandler: @escaping (Bool?) -> Void) {
         let url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?&api-key="+apiKey+"&offset="+String(pagin)
      
         Alamofire.request(url, method: .get).validate().responseJSON { response in
@@ -42,8 +42,10 @@ class ApiManager: NSObject {
                         CoreDataManager.sharedInstance.saveData(movie)   
                     }
                 }
+                remoteHandler(true)
             case .failure(let error):
                 print(error)
+                remoteHandler(false)
             }
         }
     }
