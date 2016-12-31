@@ -12,7 +12,6 @@ class MovieListCell: UITableViewCell {
 
     @IBOutlet weak var imageMovie: UIImageView!
     @IBOutlet weak var titleMovie: UILabel!
-
     @IBOutlet weak var subtitleMovie: UILabel!
     
     override func awakeFromNib() {

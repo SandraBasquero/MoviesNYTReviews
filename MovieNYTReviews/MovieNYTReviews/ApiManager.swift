@@ -19,10 +19,16 @@ class ApiManager: NSObject {
     
     private override init() {}
     static let sharedInstance:ApiManager = ApiManager()
-    
     let apiKey:String = "0f74e88f53854f4687876afdb617a208"
     var morePages = true
     
+    
+    //*********************************************************
+    // MARK: Get all the movies from api, check if they are
+    //          already in CoreData and if they not, save them
+    //          in CoreData.
+    //          For now, no paging - TODO.
+    //*********************************************************
     
     func getJSONs(_ pagin:Int, remoteHandler: @escaping (Bool?) -> Void) {
         let url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?&api-key="+apiKey+"&offset="+String(pagin)
@@ -34,7 +40,7 @@ class ApiManager: NSObject {
                 //print(json)
                 self.morePages = json["has_more"].boolValue
                 //let numForPage = json["num_results"]
-                print("--- \(json["num_results"]) movies showed. Are there more? \(self.morePages) ---")
+                //print("--- \(json["num_results"]) movies showed. Are there more? \(self.morePages) ---")
                 let results = json["results"].arrayValue
                 for movie in results {
                     if (!CoreDataManager.sharedInstance.movieAlreadyInLocal(newTitle: movie["display_title"].stringValue)) {

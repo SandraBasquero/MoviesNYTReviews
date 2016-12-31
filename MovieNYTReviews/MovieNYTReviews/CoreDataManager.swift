@@ -45,12 +45,6 @@ class CoreDataManager: NSObject {
             //You need to convert to NSManagedObject to use 'for' loops
             for trans in searchResults as [NSManagedObject] {
                 //get the Key Value pairs (although there may be a better way to do that...
-                
-                /*print("\(trans.value(forKey: "displayTitle"))")
-                let expenses = NSKeyedUnarchiver.unarchiveObject(with: trans.value(forKey: "multimedia") as! Data)
-                var aa = expenses as! Dictionary<String, Any>
-                print(aa["src"]!)*/
-                
                 moviesArray.append(trans)
             }
         } catch {
@@ -83,16 +77,9 @@ class CoreDataManager: NSObject {
         let context = getContext()
         //retrieve the entity that we just created
         let entity =  NSEntityDescription.entity(forEntityName: "Movie", in: context)
-        
         let transc = NSManagedObject(entity: entity!, insertInto: context)
-        
-        print(movieResult)
-        
+        //print(movieResult)
         transc.hyp_fill(with: movieResult.dictionaryObject!) //Sync framework
-        
-        //set the entity values
-        //transc.setValue("Blade Runner", forKey: "displayTitle")
-        //transc.setValue("The science fiction film!", forKey: "headline")
         
         //save the object
         do {
