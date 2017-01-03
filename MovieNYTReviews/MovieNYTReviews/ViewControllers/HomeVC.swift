@@ -45,18 +45,27 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         self.tableMovies.dataSource = self
         tableMovies.isScrollEnabled = false
         
-        ApiManager.sharedInstance.getJSONs(jsonPagin, remoteHandler: {
-            success in
-            if success! {
-                print("Filling array")
-                self.moviesArrayResult = CoreDataManager.sharedInstance.getAllTheMovies()
-                //print(self.moviesArrayResult)
-                self.tableMovies.reloadData()
-                self.tableMovies.isScrollEnabled = true
-            } else {
-                print("Error")
-            }
-        })
+        if ApiManager.sharedInstance.internetStatus() != .notReachable {
+            ApiManager.sharedInstance.getJSONs(jsonPagin, remoteHandler: {
+                success in
+                if success! {
+                    print("Filling array from Api")
+                    self.moviesArrayResult = CoreDataManager.sharedInstance.getAllTheMovies()
+                    //print(self.moviesArrayResult)
+                    self.tableMovies.reloadData()
+                    self.tableMovies.isScrollEnabled = true
+                } else {
+                    print("Error")
+                }
+            })
+        } else {
+            print("Filling array from local CoreData")
+            self.moviesArrayResult = CoreDataManager.sharedInstance.getAllTheMovies()
+            //print(self.moviesArrayResult)
+            self.tableMovies.reloadData()
+            self.tableMovies.isScrollEnabled = true
+        }
+        
     }
     
     
