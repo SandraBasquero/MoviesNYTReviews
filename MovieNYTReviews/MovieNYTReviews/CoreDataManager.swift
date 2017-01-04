@@ -53,6 +53,20 @@ class CoreDataManager: NSObject {
         return moviesArray
     }
     
+    func getAllImageFilms() -> [NSManagedObject] {
+        let fetchRequest: NSFetchRequest<ImageFilm> = ImageFilm.fetchRequest()
+        var imagesArray:[NSManagedObject] = []
+        
+        do{
+            let searchResults = try getContext().fetch(fetchRequest)
+            for trans in searchResults as [NSManagedObject] {
+                imagesArray.append(trans)
+            }
+        } catch {
+            print(error)
+        }
+        return imagesArray
+    }
     
     func movieAlreadyInLocal(newTitle:String) -> Bool {
         var exist = false
@@ -85,6 +99,26 @@ class CoreDataManager: NSObject {
         do {
             try context.save()
             print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+    }
+    
+    func saveFilmImage(_ movieResult:JSON) {
+        let context = getContext()
+        let entity = NSEntityDescription.entity(forEntityName: "ImageFilm", in: context)
+        let transc = NSManagedObject(entity: entity!, insertInto: context)
+        
+        let url:URL = URL(string: movieResult["multimedia"]["src"].stringValue)!
+        if let data = try? Data(contentsOf: url) {
+            transc.setValue(data, forKey: "image")
+        }
+        //save the object
+        do {
+            try context.save()
+            print("image saved!")
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         } catch {

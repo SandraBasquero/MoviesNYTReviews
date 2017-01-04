@@ -32,6 +32,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     @IBOutlet weak var tableMovies: UITableView!
     var jsonPagin = 0
     var moviesArrayResult:[NSManagedObject] = []
+    var imageFilmsArrayResult:[NSManagedObject] = []
     var imagesCache:NSCache<AnyObject, AnyObject>! //Learned here -> http://bit.ly/2iGHWJZ
     
     
@@ -53,23 +54,25 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
                 success in
                 if success! {
                     print("Filling array from Api")
-                    self.moviesArrayResult = CoreDataManager.sharedInstance.getAllTheMovies()
-                    //print(self.moviesArrayResult)
-                    self.tableMovies.reloadData()
-                    self.tableMovies.isScrollEnabled = true
+                    self.loadingFromCoreData()
                 } else {
                     print("Error")
                 }
             })
         } else {
             print("Filling array from local CoreData")
-            self.moviesArrayResult = CoreDataManager.sharedInstance.getAllTheMovies()
-            //print(self.moviesArrayResult)
-            self.tableMovies.reloadData()
-            self.tableMovies.isScrollEnabled = true
+            loadingFromCoreData()
         }
     }
     
+    // Fill arrays with Core Data info and reload tableView
+    func loadingFromCoreData() {
+        self.moviesArrayResult = CoreDataManager.sharedInstance.getAllTheMovies()
+        self.imageFilmsArrayResult = CoreDataManager.sharedInstance.getAllImageFilms()
+        //print(self.moviesArrayResult)
+        self.tableMovies.reloadData()
+        self.tableMovies.isScrollEnabled = true
+    }
     
     //*********************************************************
     // MARK: Movies TableView
@@ -94,7 +97,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
             cell.subtitleMovie.numberOfLines = 0
             cell.subtitleMovie.adjustsFontSizeToFitWidth = true
             
-            // Set image movie in table cell WITHOUT CACHE
+            // Set image movie in table cell WITHOUT CACHE - v.1
             /*DispatchQueue.global().async {
                 let multi = NSKeyedUnarchiver.unarchiveObject(with: self.moviesArrayResult[indexPath.row].value(forKey: "multimedia") as! Data)
                 var source = multi as! Dictionary<String, Any>
@@ -114,17 +117,12 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
                 //print("Cached image used, no need to download it")
                 cell.imageMovie?.image = self.imagesCache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) as? UIImage
             } else {
-                // Not use cache
-                let multi = NSKeyedUnarchiver.unarchiveObject(with: self.moviesArrayResult[indexPath.row].value(forKey: "multimedia") as! Data)
-                var source = multi as! Dictionary<String, Any>
-                let url:URL = URL(string: source["src"] as! String)!
-                if let data = try? Data(contentsOf: url) {
-                    DispatchQueue.main.async {
-                        let img:UIImage! = UIImage(data: data)
-                        cell.imageMovie?.image = img
-                        //Set cache image to use it from now on
-                        self.imagesCache.setObject(img, forKey: (indexPath as NSIndexPath).row as AnyObject)
-                    }
+                // Not use cache. Take image from local Core Data
+                DispatchQueue.main.async {
+                    let img:UIImage! = UIImage(data: self.imageFilmsArrayResult[indexPath.row].value(forKey: "image") as! Data)
+                    cell.imageMovie?.image = img
+                    //Set cache image to use it from now on
+                    self.imagesCache.setObject(img, forKey: (indexPath as NSIndexPath).row as AnyObject)
                 }
             }
             self.tableMovies.isScrollEnabled = true

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="Movie">
+    <entity name="ImageFilm" representedClassName="ImageFilm" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
     <entity name="Movie" representedClassName="Movie" syncable="YES" codeGenerationType="class">
         <attribute name="displayTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="headline" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,5 +13,6 @@
     </entity>
     <elements>
         <element name="Movie" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="ImageFilm" positionX="-63" positionY="27" width="128" height="60"/>
     </elements>
 </model>

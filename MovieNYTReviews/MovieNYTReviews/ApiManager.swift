@@ -108,7 +108,8 @@ class ApiManager: NSObject {
                 let results = json["results"].arrayValue
                 for movie in results {
                     if (!CoreDataManager.sharedInstance.movieAlreadyInLocal(newTitle: movie["display_title"].stringValue)) {
-                        CoreDataManager.sharedInstance.saveData(movie)   
+                        CoreDataManager.sharedInstance.saveData(movie)
+                        CoreDataManager.sharedInstance.saveFilmImage(movie)
                     }
                 }
                 remoteHandler(true)
