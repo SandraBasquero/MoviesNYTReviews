@@ -111,10 +111,15 @@ class CoreDataManager: NSObject {
         let entity = NSEntityDescription.entity(forEntityName: "ImageFilm", in: context)
         let transc = NSManagedObject(entity: entity!, insertInto: context)
         
+        // Save image
         let url:URL = URL(string: movieResult["multimedia"]["src"].stringValue)!
         if let data = try? Data(contentsOf: url) {
             transc.setValue(data, forKey: "image")
         }
+        // Save date
+        let date:NSDate = NSDate(fromDateString: movieResult["date_updated"].stringValue)!
+        transc.setValue(date, forKey: "dateUpdated")
+
         //save the object
         do {
             try context.save()

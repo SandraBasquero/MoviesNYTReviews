@@ -101,7 +101,7 @@ class ApiManager: NSObject {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                //print(json)
+                print(json)
                 self.morePages = json["has_more"].boolValue
                 //let numForPage = json["num_results"]
                 //print("--- \(json["num_results"]) movies showed. Are there more? \(self.morePages) ---")
