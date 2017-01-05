@@ -31,9 +31,11 @@ class CoreDataManager: NSObject {
     // MARK: CoreData queries
     //*********************************************************
     
+    // Get all movies from local Core Data
+    // -----------------------------------------------------
     func getAllTheMovies() -> [NSManagedObject] {
         let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateUpdated", ascending: false)]
+        //fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateUpdated", ascending: false)]
         var moviesArray:[NSManagedObject] = []
         
         do {
@@ -54,9 +56,11 @@ class CoreDataManager: NSObject {
         return moviesArray
     }
     
+    // Get image movies from local Core Data
+    // -----------------------------------------------------
     func getAllImageFilms() -> [NSManagedObject] {
         let fetchRequest: NSFetchRequest<ImageFilm> = ImageFilm.fetchRequest()
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateUpdated", ascending: false)]
+        //fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateUpdated", ascending: false)]
         var imagesArray:[NSManagedObject] = []
         
         do{
@@ -70,6 +74,8 @@ class CoreDataManager: NSObject {
         return imagesArray
     }
     
+    // Check by title if a movie is already in local Core Data
+    // -----------------------------------------------------
     func movieAlreadyInLocal(newTitle:String) -> Bool {
         var exist = false
         let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest() //Entity
@@ -89,6 +95,8 @@ class CoreDataManager: NSObject {
     // MARK: Save data to CoreData
     //*********************************************************
 
+    // Save Api data in local Core Data
+    // -----------------------------------------------------
     func saveData(_ movieResult:JSON)  {
         let context = getContext()
         //retrieve the entity that we just created
@@ -108,6 +116,8 @@ class CoreDataManager: NSObject {
         }
     }
     
+    // Save image film and date from Api in local Core Data
+    // -----------------------------------------------------
     func saveFilmImage(_ movieResult:JSON) {
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "ImageFilm", in: context)

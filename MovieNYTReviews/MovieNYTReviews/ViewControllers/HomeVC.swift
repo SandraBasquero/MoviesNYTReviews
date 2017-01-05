@@ -28,12 +28,19 @@ public extension String {
 //*********************************************************
 class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
+    // Variables declaration
+    // -----------------------------------------------------
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableMovies: UITableView!
     var jsonPagin = 0
     var moviesArrayResult:[NSManagedObject] = []
     var imageFilmsArrayResult:[NSManagedObject] = []
     var imagesCache:NSCache<AnyObject, AnyObject>! //Learned here -> http://bit.ly/2iGHWJZ
+    lazy var refreshControl: UIRefreshControl = {  //Learned here -> http://bit.ly/2iTPv01
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(HomeVC.handleRefresh), for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
     
     
     
@@ -43,6 +50,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableMovies.addSubview(self.refreshControl)
         self.imagesCache = NSCache()
         self.searchBar.delegate = self
         self.tableMovies.delegate = self
@@ -66,12 +74,41 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     }
     
     // Fill arrays with Core Data info and reload tableView
+    // -----------------------------------------------------
     func loadingFromCoreData() {
         self.moviesArrayResult = CoreDataManager.sharedInstance.getAllTheMovies()
         self.imageFilmsArrayResult = CoreDataManager.sharedInstance.getAllImageFilms()
         //print(self.moviesArrayResult)
         self.tableMovies.reloadData()
         self.tableMovies.isScrollEnabled = true
+    }
+    
+    // Refresh data when pull  - Learned here -> http://bit.ly/2iTPv01
+    // -----------------------------------------------------
+    func handleRefresh() {
+        // Do some reloading of data and update the table view's data source
+        // Fetch more objects from a web service, for example...
+        print("Checking new data")
+        
+        self.moviesArrayResult.removeAll()
+        self.imageFilmsArrayResult.removeAll()
+        
+        if ApiManager.sharedInstance.internetStatus() != .notReachable {
+            ApiManager.sharedInstance.getJSONs(jsonPagin, remoteHandler: {
+                success in
+                if success! {
+                    print("Filling array from Api")
+                    self.loadingFromCoreData()
+                    self.refreshControl.endRefreshing()
+                } else {
+                    print("Error")
+                }
+            })
+        } else {
+            print("Filling array from local CoreData")
+            loadingFromCoreData()
+            self.refreshControl.endRefreshing()
+        }
     }
     
     //*********************************************************
