@@ -33,6 +33,7 @@ class CoreDataManager: NSObject {
     
     func getAllTheMovies() -> [NSManagedObject] {
         let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateUpdated", ascending: false)]
         var moviesArray:[NSManagedObject] = []
         
         do {
@@ -55,6 +56,7 @@ class CoreDataManager: NSObject {
     
     func getAllImageFilms() -> [NSManagedObject] {
         let fetchRequest: NSFetchRequest<ImageFilm> = ImageFilm.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "dateUpdated", ascending: false)]
         var imagesArray:[NSManagedObject] = []
         
         do{
@@ -95,7 +97,7 @@ class CoreDataManager: NSObject {
         //print(movieResult)
         transc.hyp_fill(with: movieResult.dictionaryObject!) //Sync framework
         
-        //save the object
+        //Save the object
         do {
             try context.save()
             print("saved!")
@@ -120,7 +122,7 @@ class CoreDataManager: NSObject {
         let date:NSDate = NSDate(fromDateString: movieResult["date_updated"].stringValue)!
         transc.setValue(date, forKey: "dateUpdated")
 
-        //save the object
+        //Save the object
         do {
             try context.save()
             print("image saved!")
