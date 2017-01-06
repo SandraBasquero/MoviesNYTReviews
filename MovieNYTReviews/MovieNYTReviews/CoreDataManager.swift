@@ -124,10 +124,17 @@ class CoreDataManager: NSObject {
         let transc = NSManagedObject(entity: entity!, insertInto: context)
         
         // Save image
-        let url:URL = URL(string: movieResult["multimedia"]["src"].stringValue)!
-        if let data = try? Data(contentsOf: url) {
-            transc.setValue(data, forKey: "image")
+        if (movieResult["multimedia"]["src"].null != nil) {
+            let image = UIImage(named: "icon-default-film")
+            let imageData = NSData(data: UIImagePNGRepresentation(image!)!)
+            transc.setValue(imageData, forKey: "image")
+        } else {
+            let url:URL = URL(string: movieResult["multimedia"]["src"].stringValue)!
+            if let data = try? Data(contentsOf: url) {
+                transc.setValue(data, forKey: "image")
+            }
         }
+        
         // Save date
         let date:NSDate = NSDate(fromDateString: movieResult["date_updated"].stringValue)!
         transc.setValue(date, forKey: "dateUpdated")

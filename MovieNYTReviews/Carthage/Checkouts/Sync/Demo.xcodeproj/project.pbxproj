@@ -13,6 +13,12 @@
 		140944B01DF0BC280037F85A /* 265.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 140944AE1DF0BC280037F85A /* 265.xcdatamodeld */; };
 		140944B11DF0BC280037F85A /* 265.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 140944AE1DF0BC280037F85A /* 265.xcdatamodeld */; };
 		140944B21DF0BC280037F85A /* 265.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 140944AE1DF0BC280037F85A /* 265.xcdatamodeld */; };
+		140D43241DFF4D3A00E3B159 /* 277.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 140D43221DFF4D3A00E3B159 /* 277.xcdatamodeld */; };
+		140D43251DFF4D3A00E3B159 /* 277.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 140D43221DFF4D3A00E3B159 /* 277.xcdatamodeld */; };
+		140D43261DFF4D3A00E3B159 /* 277.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 140D43221DFF4D3A00E3B159 /* 277.xcdatamodeld */; };
+		140D43281DFF4DBC00E3B159 /* 277.json in Resources */ = {isa = PBXBuildFile; fileRef = 140D43271DFF4DBC00E3B159 /* 277.json */; };
+		140D43291DFF4DBC00E3B159 /* 277.json in Resources */ = {isa = PBXBuildFile; fileRef = 140D43271DFF4DBC00E3B159 /* 277.json */; };
+		140D432A1DFF4DBC00E3B159 /* 277.json in Resources */ = {isa = PBXBuildFile; fileRef = 140D43271DFF4DBC00E3B159 /* 277.json */; };
 		14154D871DBC465700926D4D /* DATAStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14241F151DBC3DE60042ED81 /* DATAStack.framework */; };
 		14154D881DBC465700926D4D /* SYNCPropertyMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14241F161DBC3DE60042ED81 /* SYNCPropertyMapper.framework */; };
 		14154D8B1DBC465B00926D4D /* DATAStack.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14154D891DBC465B00926D4D /* DATAStack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -106,15 +112,15 @@
 		14975C0A1DBC36F00024901A /* 225.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC1F1D9F90B5001C8DA6 /* 225.xcdatamodeld */; };
 		14975C0B1DBC36F00024901A /* 280.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC211D9F90B5001C8DA6 /* 280.xcdatamodeld */; };
 		14975C0C1DBC36F00024901A /* 283.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC231D9F90B5001C8DA6 /* 283.xcdatamodeld */; };
-		14975C0D1DBC36F00024901A /* Bug113.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC251D9F90B5001C8DA6 /* Bug113.xcdatamodeld */; };
-		14975C0E1DBC36F00024901A /* Bug125.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC271D9F90B5001C8DA6 /* Bug125.xcdatamodeld */; };
-		14975C0F1DBC36F00024901A /* Bug157.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC291D9F90B5001C8DA6 /* Bug157.xcdatamodeld */; };
-		14975C101DBC36F00024901A /* Bug179.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2B1D9F90B5001C8DA6 /* Bug179.xcdatamodeld */; };
-		14975C111DBC36F00024901A /* Bug202.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2D1D9F90B5001C8DA6 /* Bug202.xcdatamodeld */; };
-		14975C121DBC36F00024901A /* Bug239.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2F1D9F90B5001C8DA6 /* Bug239.xcdatamodeld */; };
-		14975C131DBC36F00024901A /* Bug254.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC311D9F90B5001C8DA6 /* Bug254.xcdatamodeld */; };
-		14975C141DBC36F00024901A /* Bug257.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC331D9F90B5001C8DA6 /* Bug257.xcdatamodeld */; };
-		14975C151DBC36F00024901A /* Bug84.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC351D9F90B5001C8DA6 /* Bug84.xcdatamodeld */; };
+		14975C0D1DBC36F00024901A /* 113.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC251D9F90B5001C8DA6 /* 113.xcdatamodeld */; };
+		14975C0E1DBC36F00024901A /* 125.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC271D9F90B5001C8DA6 /* 125.xcdatamodeld */; };
+		14975C0F1DBC36F00024901A /* 157.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC291D9F90B5001C8DA6 /* 157.xcdatamodeld */; };
+		14975C101DBC36F00024901A /* 179.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2B1D9F90B5001C8DA6 /* 179.xcdatamodeld */; };
+		14975C111DBC36F00024901A /* 202.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2D1D9F90B5001C8DA6 /* 202.xcdatamodeld */; };
+		14975C121DBC36F00024901A /* 239.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2F1D9F90B5001C8DA6 /* 239.xcdatamodeld */; };
+		14975C131DBC36F00024901A /* 254.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC311D9F90B5001C8DA6 /* 254.xcdatamodeld */; };
+		14975C141DBC36F00024901A /* 257.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC331D9F90B5001C8DA6 /* 257.xcdatamodeld */; };
+		14975C151DBC36F00024901A /* 84.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC351D9F90B5001C8DA6 /* 84.xcdatamodeld */; };
 		14975C161DBC36F00024901A /* Camelcase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC371D9F90B5001C8DA6 /* Camelcase.xcdatamodeld */; };
 		14975C171DBC36F00024901A /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC391D9F90B5001C8DA6 /* Contacts.xcdatamodeld */; };
 		14975C181DBC36F00024901A /* CustomRelationshipKey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC3B1D9F90B5001C8DA6 /* CustomRelationshipKey.xcdatamodeld */; };
@@ -154,15 +160,15 @@
 		14975C3E1DBC37180024901A /* 225.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC1F1D9F90B5001C8DA6 /* 225.xcdatamodeld */; };
 		14975C3F1DBC37180024901A /* 280.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC211D9F90B5001C8DA6 /* 280.xcdatamodeld */; };
 		14975C401DBC37180024901A /* 283.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC231D9F90B5001C8DA6 /* 283.xcdatamodeld */; };
-		14975C411DBC37180024901A /* Bug113.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC251D9F90B5001C8DA6 /* Bug113.xcdatamodeld */; };
-		14975C421DBC37180024901A /* Bug125.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC271D9F90B5001C8DA6 /* Bug125.xcdatamodeld */; };
-		14975C431DBC37180024901A /* Bug157.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC291D9F90B5001C8DA6 /* Bug157.xcdatamodeld */; };
-		14975C441DBC37180024901A /* Bug179.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2B1D9F90B5001C8DA6 /* Bug179.xcdatamodeld */; };
-		14975C451DBC37180024901A /* Bug202.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2D1D9F90B5001C8DA6 /* Bug202.xcdatamodeld */; };
-		14975C461DBC37180024901A /* Bug239.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2F1D9F90B5001C8DA6 /* Bug239.xcdatamodeld */; };
-		14975C471DBC37180024901A /* Bug254.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC311D9F90B5001C8DA6 /* Bug254.xcdatamodeld */; };
-		14975C481DBC37180024901A /* Bug257.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC331D9F90B5001C8DA6 /* Bug257.xcdatamodeld */; };
-		14975C491DBC37180024901A /* Bug84.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC351D9F90B5001C8DA6 /* Bug84.xcdatamodeld */; };
+		14975C411DBC37180024901A /* 113.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC251D9F90B5001C8DA6 /* 113.xcdatamodeld */; };
+		14975C421DBC37180024901A /* 125.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC271D9F90B5001C8DA6 /* 125.xcdatamodeld */; };
+		14975C431DBC37180024901A /* 157.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC291D9F90B5001C8DA6 /* 157.xcdatamodeld */; };
+		14975C441DBC37180024901A /* 179.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2B1D9F90B5001C8DA6 /* 179.xcdatamodeld */; };
+		14975C451DBC37180024901A /* 202.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2D1D9F90B5001C8DA6 /* 202.xcdatamodeld */; };
+		14975C461DBC37180024901A /* 239.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2F1D9F90B5001C8DA6 /* 239.xcdatamodeld */; };
+		14975C471DBC37180024901A /* 254.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC311D9F90B5001C8DA6 /* 254.xcdatamodeld */; };
+		14975C481DBC37180024901A /* 257.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC331D9F90B5001C8DA6 /* 257.xcdatamodeld */; };
+		14975C491DBC37180024901A /* 84.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC351D9F90B5001C8DA6 /* 84.xcdatamodeld */; };
 		14975C4A1DBC37180024901A /* Camelcase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC371D9F90B5001C8DA6 /* Camelcase.xcdatamodeld */; };
 		14975C4B1DBC37180024901A /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC391D9F90B5001C8DA6 /* Contacts.xcdatamodeld */; };
 		14975C4C1DBC37180024901A /* CustomRelationshipKey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC3B1D9F90B5001C8DA6 /* CustomRelationshipKey.xcdatamodeld */; };
@@ -401,15 +407,15 @@
 		4403DC961D9F90B5001C8DA6 /* 225.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC1F1D9F90B5001C8DA6 /* 225.xcdatamodeld */; };
 		4403DC971D9F90B5001C8DA6 /* 280.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC211D9F90B5001C8DA6 /* 280.xcdatamodeld */; };
 		4403DC981D9F90B5001C8DA6 /* 283.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC231D9F90B5001C8DA6 /* 283.xcdatamodeld */; };
-		4403DC991D9F90B5001C8DA6 /* Bug113.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC251D9F90B5001C8DA6 /* Bug113.xcdatamodeld */; };
-		4403DC9A1D9F90B5001C8DA6 /* Bug125.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC271D9F90B5001C8DA6 /* Bug125.xcdatamodeld */; };
-		4403DC9B1D9F90B5001C8DA6 /* Bug157.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC291D9F90B5001C8DA6 /* Bug157.xcdatamodeld */; };
-		4403DC9C1D9F90B5001C8DA6 /* Bug179.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2B1D9F90B5001C8DA6 /* Bug179.xcdatamodeld */; };
-		4403DC9D1D9F90B5001C8DA6 /* Bug202.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2D1D9F90B5001C8DA6 /* Bug202.xcdatamodeld */; };
-		4403DC9E1D9F90B5001C8DA6 /* Bug239.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2F1D9F90B5001C8DA6 /* Bug239.xcdatamodeld */; };
-		4403DC9F1D9F90B5001C8DA6 /* Bug254.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC311D9F90B5001C8DA6 /* Bug254.xcdatamodeld */; };
-		4403DCA01D9F90B5001C8DA6 /* Bug257.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC331D9F90B5001C8DA6 /* Bug257.xcdatamodeld */; };
-		4403DCA11D9F90B5001C8DA6 /* Bug84.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC351D9F90B5001C8DA6 /* Bug84.xcdatamodeld */; };
+		4403DC991D9F90B5001C8DA6 /* 113.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC251D9F90B5001C8DA6 /* 113.xcdatamodeld */; };
+		4403DC9A1D9F90B5001C8DA6 /* 125.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC271D9F90B5001C8DA6 /* 125.xcdatamodeld */; };
+		4403DC9B1D9F90B5001C8DA6 /* 157.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC291D9F90B5001C8DA6 /* 157.xcdatamodeld */; };
+		4403DC9C1D9F90B5001C8DA6 /* 179.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2B1D9F90B5001C8DA6 /* 179.xcdatamodeld */; };
+		4403DC9D1D9F90B5001C8DA6 /* 202.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2D1D9F90B5001C8DA6 /* 202.xcdatamodeld */; };
+		4403DC9E1D9F90B5001C8DA6 /* 239.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC2F1D9F90B5001C8DA6 /* 239.xcdatamodeld */; };
+		4403DC9F1D9F90B5001C8DA6 /* 254.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC311D9F90B5001C8DA6 /* 254.xcdatamodeld */; };
+		4403DCA01D9F90B5001C8DA6 /* 257.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC331D9F90B5001C8DA6 /* 257.xcdatamodeld */; };
+		4403DCA11D9F90B5001C8DA6 /* 84.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC351D9F90B5001C8DA6 /* 84.xcdatamodeld */; };
 		4403DCA21D9F90B5001C8DA6 /* Camelcase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC371D9F90B5001C8DA6 /* Camelcase.xcdatamodeld */; };
 		4403DCA31D9F90B5001C8DA6 /* Contacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC391D9F90B5001C8DA6 /* Contacts.xcdatamodeld */; };
 		4403DCA41D9F90B5001C8DA6 /* CustomRelationshipKey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4403DC3B1D9F90B5001C8DA6 /* CustomRelationshipKey.xcdatamodeld */; };
@@ -582,6 +588,8 @@
 /* Begin PBXFileReference section */
 		140944AA1DF0B9840037F85A /* 265.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 265.json; sourceTree = "<group>"; };
 		140944AF1DF0BC280037F85A /* 265.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 265.xcdatamodel; sourceTree = "<group>"; };
+		140D43231DFF4D3A00E3B159 /* 239.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 239.xcdatamodel; sourceTree = "<group>"; };
+		140D43271DFF4DBC00E3B159 /* 277.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 277.json; sourceTree = "<group>"; };
 		14154D891DBC465B00926D4D /* DATAStack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DATAStack.framework; path = Carthage/Build/tvOS/DATAStack.framework; sourceTree = "<group>"; };
 		14154D8A1DBC465B00926D4D /* SYNCPropertyMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SYNCPropertyMapper.framework; path = Carthage/Build/tvOS/SYNCPropertyMapper.framework; sourceTree = "<group>"; };
 		14154D8D1DBC466200926D4D /* DATAStack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DATAStack.framework; path = Carthage/Build/Mac/DATAStack.framework; sourceTree = "<group>"; };
@@ -692,15 +700,15 @@
 		4403DC201D9F90B5001C8DA6 /* 151-many-to-many.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "151-many-to-many.xcdatamodel"; sourceTree = "<group>"; };
 		4403DC221D9F90B5001C8DA6 /* 151-many-to-many.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "151-many-to-many.xcdatamodel"; sourceTree = "<group>"; };
 		4403DC241D9F90B5001C8DA6 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
-		4403DC261D9F90B5001C8DA6 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
-		4403DC281D9F90B5001C8DA6 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
-		4403DC2A1D9F90B5001C8DA6 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
-		4403DC2C1D9F90B5001C8DA6 /* Bug179.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bug179.xcdatamodel; sourceTree = "<group>"; };
-		4403DC2E1D9F90B5001C8DA6 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
-		4403DC301D9F90B5001C8DA6 /* Superentities.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Superentities.xcdatamodel; sourceTree = "<group>"; };
-		4403DC321D9F90B5001C8DA6 /* Bug179.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bug179.xcdatamodel; sourceTree = "<group>"; };
-		4403DC341D9F90B5001C8DA6 /* Bug179.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bug179.xcdatamodel; sourceTree = "<group>"; };
-		4403DC361D9F90B5001C8DA6 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
+		4403DC261D9F90B5001C8DA6 /* 113.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 113.xcdatamodel; sourceTree = "<group>"; };
+		4403DC281D9F90B5001C8DA6 /* 125.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 125.xcdatamodel; sourceTree = "<group>"; };
+		4403DC2A1D9F90B5001C8DA6 /* 157.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 157.xcdatamodel; sourceTree = "<group>"; };
+		4403DC2C1D9F90B5001C8DA6 /* 179.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 179.xcdatamodel; sourceTree = "<group>"; };
+		4403DC2E1D9F90B5001C8DA6 /* 202.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 202.xcdatamodel; sourceTree = "<group>"; };
+		4403DC301D9F90B5001C8DA6 /* 239.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 239.xcdatamodel; sourceTree = "<group>"; };
+		4403DC321D9F90B5001C8DA6 /* 254.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 254.xcdatamodel; sourceTree = "<group>"; };
+		4403DC341D9F90B5001C8DA6 /* 257.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 257.xcdatamodel; sourceTree = "<group>"; };
+		4403DC361D9F90B5001C8DA6 /* 84.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 84.xcdatamodel; sourceTree = "<group>"; };
 		4403DC381D9F90B5001C8DA6 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
 		4403DC3A1D9F90B5001C8DA6 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
 		4403DC3C1D9F90B5001C8DA6 /* Demo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Demo.xcdatamodel; sourceTree = "<group>"; };
@@ -962,6 +970,7 @@
 				4E2F71F21DD60110003F0108 /* 233.json */,
 				44CA3F691DEB349100F242D0 /* 237.json */,
 				140944AA1DF0B9840037F85A /* 265.json */,
+				140D43271DFF4DBC00E3B159 /* 277.json */,
 				4403DBEC1D9F90B5001C8DA6 /* 280.json */,
 				4403DBED1D9F90B5001C8DA6 /* 283.json */,
 				14E9C13E1DEA2EE100A21B9E /* 320.json */,
@@ -1013,25 +1022,26 @@
 			isa = PBXGroup;
 			children = (
 				4E28B59E1DEE43F8007FED27 /* 3ca82a0.xcdatamodeld */,
+				4403DC351D9F90B5001C8DA6 /* 84.xcdatamodeld */,
+				4403DC251D9F90B5001C8DA6 /* 113.xcdatamodeld */,
+				4403DC271D9F90B5001C8DA6 /* 125.xcdatamodeld */,
 				4403DC171D9F90B5001C8DA6 /* 151-many-to-many.xcdatamodeld */,
 				4403DC191D9F90B5001C8DA6 /* 151-ordered-many-to-many.xcdatamodeld */,
 				4403DC1B1D9F90B5001C8DA6 /* 151-ordered-to-many.xcdatamodeld */,
 				4403DC1D1D9F90B5001C8DA6 /* 151-to-many.xcdatamodeld */,
+				4403DC291D9F90B5001C8DA6 /* 157.xcdatamodeld */,
+				4403DC2B1D9F90B5001C8DA6 /* 179.xcdatamodeld */,
+				4403DC2D1D9F90B5001C8DA6 /* 202.xcdatamodeld */,
 				4403DC1F1D9F90B5001C8DA6 /* 225.xcdatamodeld */,
 				4E2F71E71DD3DD56003F0108 /* 233.xcdatamodeld */,
+				4403DC2F1D9F90B5001C8DA6 /* 239.xcdatamodeld */,
+				4403DC311D9F90B5001C8DA6 /* 254.xcdatamodeld */,
+				4403DC331D9F90B5001C8DA6 /* 257.xcdatamodeld */,
 				140944AE1DF0BC280037F85A /* 265.xcdatamodeld */,
+				140D43221DFF4D3A00E3B159 /* 277.xcdatamodeld */,
 				4403DC211D9F90B5001C8DA6 /* 280.xcdatamodeld */,
 				4403DC231D9F90B5001C8DA6 /* 283.xcdatamodeld */,
 				14E9C1391DEA2ECD00A21B9E /* 320.xcdatamodeld */,
-				4403DC351D9F90B5001C8DA6 /* Bug84.xcdatamodeld */,
-				4403DC251D9F90B5001C8DA6 /* Bug113.xcdatamodeld */,
-				4403DC271D9F90B5001C8DA6 /* Bug125.xcdatamodeld */,
-				4403DC291D9F90B5001C8DA6 /* Bug157.xcdatamodeld */,
-				4403DC2B1D9F90B5001C8DA6 /* Bug179.xcdatamodeld */,
-				4403DC2D1D9F90B5001C8DA6 /* Bug202.xcdatamodeld */,
-				4403DC2F1D9F90B5001C8DA6 /* Bug239.xcdatamodeld */,
-				4403DC311D9F90B5001C8DA6 /* Bug254.xcdatamodeld */,
-				4403DC331D9F90B5001C8DA6 /* Bug257.xcdatamodeld */,
 				4403DC371D9F90B5001C8DA6 /* Camelcase.xcdatamodeld */,
 				4403DC391D9F90B5001C8DA6 /* Contacts.xcdatamodeld */,
 				4403DC3B1D9F90B5001C8DA6 /* CustomRelationshipKey.xcdatamodeld */,
@@ -1502,6 +1512,7 @@
 				4403DC6B1D9F90B5001C8DA6 /* bug-113-custom_relationship_key_to_one.json in Resources */,
 				4403DC711D9F90B5001C8DA6 /* bug-202-a.json in Resources */,
 				4403DC661D9F90B5001C8DA6 /* 225-a-replaced.json in Resources */,
+				140D43281DFF4DBC00E3B159 /* 277.json in Resources */,
 				4403DC601D9F90B5001C8DA6 /* 151-to-many-users.json in Resources */,
 				445D3BCD1D9F9373007F9E26 /* users3.json in Resources */,
 				4403DC721D9F90B5001C8DA6 /* bug-202-b.json in Resources */,
@@ -1576,6 +1587,7 @@
 				14975C921DBC373A0024901A /* tagged_notes.json in Resources */,
 				14975C931DBC373A0024901A /* to-one-camelcase.json in Resources */,
 				14975C941DBC373A0024901A /* to-one-snakecase.json in Resources */,
+				140D43291DFF4DBC00E3B159 /* 277.json in Resources */,
 				14975C951DBC373A0024901A /* unique.json in Resources */,
 				14975C961DBC373A0024901A /* users_a.json in Resources */,
 				14975C971DBC373A0024901A /* users_b.json in Resources */,
@@ -1650,6 +1662,7 @@
 				14975CD01DBC374C0024901A /* tagged_notes.json in Resources */,
 				14975CD11DBC374C0024901A /* to-one-camelcase.json in Resources */,
 				14975CD21DBC374C0024901A /* to-one-snakecase.json in Resources */,
+				140D432A1DFF4DBC00E3B159 /* 277.json in Resources */,
 				14975CD31DBC374C0024901A /* unique.json in Resources */,
 				14975CD41DBC374C0024901A /* users_a.json in Resources */,
 				14975CD51DBC374C0024901A /* users_b.json in Resources */,
@@ -1787,12 +1800,13 @@
 				4403DC951D9F90B5001C8DA6 /* 151-to-many.xcdatamodeld in Sources */,
 				44CC76101D9F9076003545A4 /* TestCheckTests.swift in Sources */,
 				14E9C13B1DEA2ECD00A21B9E /* 320.xcdatamodeld in Sources */,
-				4403DCA01D9F90B5001C8DA6 /* Bug257.xcdatamodeld in Sources */,
+				4403DCA01D9F90B5001C8DA6 /* 257.xcdatamodeld in Sources */,
 				4403DCB41D9F90B5001C8DA6 /* NSManagedObjectContext+SyncTests.swift in Sources */,
 				4403DCB11D9F90B5001C8DA6 /* NSArray+SyncTests.swift in Sources */,
 				445D3BB91D9F932C007F9E26 /* DATAFilter.swift in Sources */,
 				146EB24E1DEF75D70068EDC3 /* DeleteTests.swift in Sources */,
 				44584FDC1DF2EE550082D7A0 /* FetchTests.swift in Sources */,
+				140D43241DFF4D3A00E3B159 /* 277.xcdatamodeld in Sources */,
 				444546D61DF06E2600CC7928 /* UpdateTests.swift in Sources */,
 				4403DCB21D9F90B5001C8DA6 /* NSEntityDescription+SyncTests.swift in Sources */,
 				44968BFB1DA0021300E71A53 /* NSEntityDescription+Sync.swift in Sources */,
@@ -1800,7 +1814,7 @@
 				4403DC971D9F90B5001C8DA6 /* 280.xcdatamodeld in Sources */,
 				44968BFE1DA0021300E71A53 /* Sync.swift in Sources */,
 				4403DCA41D9F90B5001C8DA6 /* CustomRelationshipKey.xcdatamodeld in Sources */,
-				4403DCA11D9F90B5001C8DA6 /* Bug84.xcdatamodeld in Sources */,
+				4403DCA11D9F90B5001C8DA6 /* 84.xcdatamodeld in Sources */,
 				1421405D1DBCDD52000FF107 /* Tests.xcdatamodeld in Sources */,
 				449828041D9F8F2D00E2BCA3 /* TestCheck.swift in Sources */,
 				146EB2511DEF75D70068EDC3 /* InsertOrUpdateTests.swift in Sources */,
@@ -1813,26 +1827,26 @@
 				44968BFC1DA0021300E71A53 /* NSManagedObject+Sync.swift in Sources */,
 				142CD2AE1DEF3A01002FDABE /* Sync+NSPersistentContainer.swift in Sources */,
 				4403DC5A1D9F90B5001C8DA6 /* Helper.swift in Sources */,
-				4403DC9D1D9F90B5001C8DA6 /* Bug202.xcdatamodeld in Sources */,
+				4403DC9D1D9F90B5001C8DA6 /* 202.xcdatamodeld in Sources */,
 				4403DCA31D9F90B5001C8DA6 /* Contacts.xcdatamodeld in Sources */,
 				4403DCA91D9F90B5001C8DA6 /* NotesB.xcdatamodeld in Sources */,
 				4403DCB51D9F90B5001C8DA6 /* SyncTests.swift in Sources */,
 				44968BFA1DA0021300E71A53 /* NSArray+Sync.swift in Sources */,
 				4403DC981D9F90B5001C8DA6 /* 283.xcdatamodeld in Sources */,
 				445D3BC61D9F9373007F9E26 /* Model.xcdatamodeld in Sources */,
-				4403DC9E1D9F90B5001C8DA6 /* Bug239.xcdatamodeld in Sources */,
-				4403DC9C1D9F90B5001C8DA6 /* Bug179.xcdatamodeld in Sources */,
+				4403DC9E1D9F90B5001C8DA6 /* 239.xcdatamodeld in Sources */,
+				4403DC9C1D9F90B5001C8DA6 /* 179.xcdatamodeld in Sources */,
 				4403DCAB1D9F90B5001C8DA6 /* Organizations.xcdatamodeld in Sources */,
 				4403DCA21D9F90B5001C8DA6 /* Camelcase.xcdatamodeld in Sources */,
 				4403DCAA1D9F90B5001C8DA6 /* OrderedSocial.xcdatamodeld in Sources */,
-				4403DC991D9F90B5001C8DA6 /* Bug113.xcdatamodeld in Sources */,
+				4403DC991D9F90B5001C8DA6 /* 113.xcdatamodeld in Sources */,
 				14AF6AFB1DFC3D88009E5BC4 /* Result.swift in Sources */,
 				4403DCB01D9F90B5001C8DA6 /* Unique.xcdatamodeld in Sources */,
 				140944B01DF0BC280037F85A /* 265.xcdatamodeld in Sources */,
 				4403DCAF1D9F90B5001C8DA6 /* ToOne.xcdatamodeld in Sources */,
-				4403DC9A1D9F90B5001C8DA6 /* Bug125.xcdatamodeld in Sources */,
-				4403DC9B1D9F90B5001C8DA6 /* Bug157.xcdatamodeld in Sources */,
-				4403DC9F1D9F90B5001C8DA6 /* Bug254.xcdatamodeld in Sources */,
+				4403DC9A1D9F90B5001C8DA6 /* 125.xcdatamodeld in Sources */,
+				4403DC9B1D9F90B5001C8DA6 /* 157.xcdatamodeld in Sources */,
+				4403DC9F1D9F90B5001C8DA6 /* 254.xcdatamodeld in Sources */,
 				4403DC961D9F90B5001C8DA6 /* 225.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1862,20 +1876,21 @@
 				14975C0B1DBC36F00024901A /* 280.xcdatamodeld in Sources */,
 				146EB24F1DEF75D70068EDC3 /* DeleteTests.swift in Sources */,
 				44584FDD1DF2EE550082D7A0 /* FetchTests.swift in Sources */,
+				140D43251DFF4D3A00E3B159 /* 277.xcdatamodeld in Sources */,
 				444546D71DF06E2600CC7928 /* UpdateTests.swift in Sources */,
 				14975C0C1DBC36F00024901A /* 283.xcdatamodeld in Sources */,
-				14975C0D1DBC36F00024901A /* Bug113.xcdatamodeld in Sources */,
-				14975C0E1DBC36F00024901A /* Bug125.xcdatamodeld in Sources */,
-				14975C0F1DBC36F00024901A /* Bug157.xcdatamodeld in Sources */,
-				14975C101DBC36F00024901A /* Bug179.xcdatamodeld in Sources */,
-				14975C111DBC36F00024901A /* Bug202.xcdatamodeld in Sources */,
-				14975C121DBC36F00024901A /* Bug239.xcdatamodeld in Sources */,
-				14975C131DBC36F00024901A /* Bug254.xcdatamodeld in Sources */,
+				14975C0D1DBC36F00024901A /* 113.xcdatamodeld in Sources */,
+				14975C0E1DBC36F00024901A /* 125.xcdatamodeld in Sources */,
+				14975C0F1DBC36F00024901A /* 157.xcdatamodeld in Sources */,
+				14975C101DBC36F00024901A /* 179.xcdatamodeld in Sources */,
+				14975C111DBC36F00024901A /* 202.xcdatamodeld in Sources */,
+				14975C121DBC36F00024901A /* 239.xcdatamodeld in Sources */,
+				14975C131DBC36F00024901A /* 254.xcdatamodeld in Sources */,
 				1421405E1DBCDD52000FF107 /* Tests.xcdatamodeld in Sources */,
 				146EB2521DEF75D70068EDC3 /* InsertOrUpdateTests.swift in Sources */,
-				14975C141DBC36F00024901A /* Bug257.xcdatamodeld in Sources */,
+				14975C141DBC36F00024901A /* 257.xcdatamodeld in Sources */,
 				14E285301DC173A800C4E461 /* NSPersistentContainerTests.swift in Sources */,
-				14975C151DBC36F00024901A /* Bug84.xcdatamodeld in Sources */,
+				14975C151DBC36F00024901A /* 84.xcdatamodeld in Sources */,
 				4E28B5A11DEE43F8007FED27 /* 3ca82a0.xcdatamodeld in Sources */,
 				14975C161DBC36F00024901A /* Camelcase.xcdatamodeld in Sources */,
 				14975C171DBC36F00024901A /* Contacts.xcdatamodeld in Sources */,
@@ -1931,20 +1946,21 @@
 				14975C3F1DBC37180024901A /* 280.xcdatamodeld in Sources */,
 				146EB2501DEF75D70068EDC3 /* DeleteTests.swift in Sources */,
 				44584FDE1DF2EE550082D7A0 /* FetchTests.swift in Sources */,
+				140D43261DFF4D3A00E3B159 /* 277.xcdatamodeld in Sources */,
 				444546D81DF06E2600CC7928 /* UpdateTests.swift in Sources */,
 				14975C401DBC37180024901A /* 283.xcdatamodeld in Sources */,
-				14975C411DBC37180024901A /* Bug113.xcdatamodeld in Sources */,
-				14975C421DBC37180024901A /* Bug125.xcdatamodeld in Sources */,
-				14975C431DBC37180024901A /* Bug157.xcdatamodeld in Sources */,
-				14975C441DBC37180024901A /* Bug179.xcdatamodeld in Sources */,
-				14975C451DBC37180024901A /* Bug202.xcdatamodeld in Sources */,
-				14975C461DBC37180024901A /* Bug239.xcdatamodeld in Sources */,
-				14975C471DBC37180024901A /* Bug254.xcdatamodeld in Sources */,
+				14975C411DBC37180024901A /* 113.xcdatamodeld in Sources */,
+				14975C421DBC37180024901A /* 125.xcdatamodeld in Sources */,
+				14975C431DBC37180024901A /* 157.xcdatamodeld in Sources */,
+				14975C441DBC37180024901A /* 179.xcdatamodeld in Sources */,
+				14975C451DBC37180024901A /* 202.xcdatamodeld in Sources */,
+				14975C461DBC37180024901A /* 239.xcdatamodeld in Sources */,
+				14975C471DBC37180024901A /* 254.xcdatamodeld in Sources */,
 				1421405F1DBCDD52000FF107 /* Tests.xcdatamodeld in Sources */,
 				146EB2531DEF75D70068EDC3 /* InsertOrUpdateTests.swift in Sources */,
-				14975C481DBC37180024901A /* Bug257.xcdatamodeld in Sources */,
+				14975C481DBC37180024901A /* 257.xcdatamodeld in Sources */,
 				14E285311DC173A800C4E461 /* NSPersistentContainerTests.swift in Sources */,
-				14975C491DBC37180024901A /* Bug84.xcdatamodeld in Sources */,
+				14975C491DBC37180024901A /* 84.xcdatamodeld in Sources */,
 				4E28B5A21DEE43F8007FED27 /* 3ca82a0.xcdatamodeld in Sources */,
 				14975C4A1DBC37180024901A /* Camelcase.xcdatamodeld in Sources */,
 				14975C4B1DBC37180024901A /* Contacts.xcdatamodeld in Sources */,
@@ -2652,6 +2668,16 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
+		140D43221DFF4D3A00E3B159 /* 277.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				140D43231DFF4D3A00E3B159 /* 239.xcdatamodel */,
+			);
+			currentVersion = 140D43231DFF4D3A00E3B159 /* 239.xcdatamodel */;
+			path = 277.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		1421405B1DBCDD52000FF107 /* Tests.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
@@ -2742,93 +2768,93 @@
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		4403DC251D9F90B5001C8DA6 /* Bug113.xcdatamodeld */ = {
+		4403DC251D9F90B5001C8DA6 /* 113.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4403DC261D9F90B5001C8DA6 /* Demo.xcdatamodel */,
+				4403DC261D9F90B5001C8DA6 /* 113.xcdatamodel */,
 			);
-			currentVersion = 4403DC261D9F90B5001C8DA6 /* Demo.xcdatamodel */;
-			path = Bug113.xcdatamodeld;
+			currentVersion = 4403DC261D9F90B5001C8DA6 /* 113.xcdatamodel */;
+			path = 113.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		4403DC271D9F90B5001C8DA6 /* Bug125.xcdatamodeld */ = {
+		4403DC271D9F90B5001C8DA6 /* 125.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4403DC281D9F90B5001C8DA6 /* Demo.xcdatamodel */,
+				4403DC281D9F90B5001C8DA6 /* 125.xcdatamodel */,
 			);
-			currentVersion = 4403DC281D9F90B5001C8DA6 /* Demo.xcdatamodel */;
-			path = Bug125.xcdatamodeld;
+			currentVersion = 4403DC281D9F90B5001C8DA6 /* 125.xcdatamodel */;
+			path = 125.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		4403DC291D9F90B5001C8DA6 /* Bug157.xcdatamodeld */ = {
+		4403DC291D9F90B5001C8DA6 /* 157.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4403DC2A1D9F90B5001C8DA6 /* Demo.xcdatamodel */,
+				4403DC2A1D9F90B5001C8DA6 /* 157.xcdatamodel */,
 			);
-			currentVersion = 4403DC2A1D9F90B5001C8DA6 /* Demo.xcdatamodel */;
-			path = Bug157.xcdatamodeld;
+			currentVersion = 4403DC2A1D9F90B5001C8DA6 /* 157.xcdatamodel */;
+			path = 157.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		4403DC2B1D9F90B5001C8DA6 /* Bug179.xcdatamodeld */ = {
+		4403DC2B1D9F90B5001C8DA6 /* 179.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4403DC2C1D9F90B5001C8DA6 /* Bug179.xcdatamodel */,
+				4403DC2C1D9F90B5001C8DA6 /* 179.xcdatamodel */,
 			);
-			currentVersion = 4403DC2C1D9F90B5001C8DA6 /* Bug179.xcdatamodel */;
-			path = Bug179.xcdatamodeld;
+			currentVersion = 4403DC2C1D9F90B5001C8DA6 /* 179.xcdatamodel */;
+			path = 179.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		4403DC2D1D9F90B5001C8DA6 /* Bug202.xcdatamodeld */ = {
+		4403DC2D1D9F90B5001C8DA6 /* 202.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4403DC2E1D9F90B5001C8DA6 /* Demo.xcdatamodel */,
+				4403DC2E1D9F90B5001C8DA6 /* 202.xcdatamodel */,
 			);
-			currentVersion = 4403DC2E1D9F90B5001C8DA6 /* Demo.xcdatamodel */;
-			path = Bug202.xcdatamodeld;
+			currentVersion = 4403DC2E1D9F90B5001C8DA6 /* 202.xcdatamodel */;
+			path = 202.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		4403DC2F1D9F90B5001C8DA6 /* Bug239.xcdatamodeld */ = {
+		4403DC2F1D9F90B5001C8DA6 /* 239.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4403DC301D9F90B5001C8DA6 /* Superentities.xcdatamodel */,
+				4403DC301D9F90B5001C8DA6 /* 239.xcdatamodel */,
 			);
-			currentVersion = 4403DC301D9F90B5001C8DA6 /* Superentities.xcdatamodel */;
-			path = Bug239.xcdatamodeld;
+			currentVersion = 4403DC301D9F90B5001C8DA6 /* 239.xcdatamodel */;
+			path = 239.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		4403DC311D9F90B5001C8DA6 /* Bug254.xcdatamodeld */ = {
+		4403DC311D9F90B5001C8DA6 /* 254.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4403DC321D9F90B5001C8DA6 /* Bug179.xcdatamodel */,
+				4403DC321D9F90B5001C8DA6 /* 254.xcdatamodel */,
 			);
-			currentVersion = 4403DC321D9F90B5001C8DA6 /* Bug179.xcdatamodel */;
-			path = Bug254.xcdatamodeld;
+			currentVersion = 4403DC321D9F90B5001C8DA6 /* 254.xcdatamodel */;
+			path = 254.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		4403DC331D9F90B5001C8DA6 /* Bug257.xcdatamodeld */ = {
+		4403DC331D9F90B5001C8DA6 /* 257.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4403DC341D9F90B5001C8DA6 /* Bug179.xcdatamodel */,
+				4403DC341D9F90B5001C8DA6 /* 257.xcdatamodel */,
 			);
-			currentVersion = 4403DC341D9F90B5001C8DA6 /* Bug179.xcdatamodel */;
-			path = Bug257.xcdatamodeld;
+			currentVersion = 4403DC341D9F90B5001C8DA6 /* 257.xcdatamodel */;
+			path = 257.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		4403DC351D9F90B5001C8DA6 /* Bug84.xcdatamodeld */ = {
+		4403DC351D9F90B5001C8DA6 /* 84.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4403DC361D9F90B5001C8DA6 /* Demo.xcdatamodel */,
+				4403DC361D9F90B5001C8DA6 /* 84.xcdatamodel */,
 			);
-			currentVersion = 4403DC361D9F90B5001C8DA6 /* Demo.xcdatamodel */;
-			path = Bug84.xcdatamodeld;
+			currentVersion = 4403DC361D9F90B5001C8DA6 /* 84.xcdatamodel */;
+			path = 84.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

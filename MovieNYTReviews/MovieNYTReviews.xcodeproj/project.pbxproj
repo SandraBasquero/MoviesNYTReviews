@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6D6A5251E1FFA4D00480F96 /* icon-default-film.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D6A5241E1FFA4D00480F96 /* icon-default-film.png */; };
 		B6EF7F0F1E06932200DA796F /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EF7F0E1E06932200DA796F /* ApiManager.swift */; };
 		EB07B4111E0D30C9003987EF /* DATAStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB07B4101E0D30C9003987EF /* DATAStack.framework */; };
 		EB07B4121E0D30C9003987EF /* DATAStack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB07B4101E0D30C9003987EF /* DATAStack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B6D6A5241E1FFA4D00480F96 /* icon-default-film.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-default-film.png"; sourceTree = "<group>"; };
 		B6EF7F0E1E06932200DA796F /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = MovieNYTReviews/ApiManager.swift; sourceTree = SOURCE_ROOT; };
 		EB07B4101E0D30C9003987EF /* DATAStack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DATAStack.framework; path = Carthage/Build/iOS/DATAStack.framework; sourceTree = "<group>"; };
 		EB07B4131E0D30DE003987EF /* SYNCPropertyMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SYNCPropertyMapper.framework; path = Carthage/Build/iOS/SYNCPropertyMapper.framework; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6D6A5231E1FFA4D00480F96 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B6D6A5241E1FFA4D00480F96 /* icon-default-film.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		EBD235D61E015A7B00C99070 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 		EBE4627C1E01491300ADF6C1 /* MovieNYTReviews */ = {
 			isa = PBXGroup;
 			children = (
+				B6D6A5231E1FFA4D00480F96 /* images */,
 				EBD235DF1E01610B00C99070 /* Api */,
 				EBD235E01E01610B00C99070 /* ViewControllers */,
 				EBE4627D1E01491300ADF6C1 /* AppDelegate.swift */,
@@ -270,7 +281,7 @@
 				TargetAttributes = {
 					EBE462791E01491300ADF6C1 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = S9U63P9Q69;
+						DevelopmentTeam = GKD62JWZ34;
 						ProvisioningStyle = Automatic;
 					};
 					EBE462901E01491300ADF6C1 = {
@@ -310,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D6A5251E1FFA4D00480F96 /* icon-default-film.png in Resources */,
 				EBE4628B1E01491300ADF6C1 /* LaunchScreen.storyboard in Resources */,
 				EBE462881E01491300ADF6C1 /* Assets.xcassets in Resources */,
 				EBE462831E01491300ADF6C1 /* Main.storyboard in Resources */,
@@ -495,7 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S9U63P9Q69;
+				DEVELOPMENT_TEAM = GKD62JWZ34;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -514,7 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = S9U63P9Q69;
+				DEVELOPMENT_TEAM = GKD62JWZ34;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
