@@ -41,8 +41,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         refreshControl.addTarget(self, action: #selector(HomeVC.handleRefresh), for: UIControlEvents.valueChanged)
         return refreshControl
     }()
-    
-    
+    @IBOutlet weak var syncActivity: UIActivityIndicatorView!
+    @IBOutlet weak var syncBackground: UIView!
+    @IBOutlet weak var labelBackground: UILabel!
     
     //*********************************************************
     // MARK: View Loading
@@ -56,6 +57,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         self.tableMovies.delegate = self
         self.tableMovies.dataSource = self
         tableMovies.isScrollEnabled = false
+        self.syncActivity.startAnimating()
         
         if ApiManager.sharedInstance.internetStatus() != .notReachable {
             ApiManager.sharedInstance.getJSONs(jsonPagin, remoteHandler: {
@@ -81,6 +83,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         //print(self.moviesArrayResult)
         self.tableMovies.reloadData()
         self.tableMovies.isScrollEnabled = true
+        self.syncActivity.stopAnimating()
+        self.syncBackground.isHidden = true
+        self.labelBackground.isHidden = true
     }
     
     // Refresh data when pull  - Learned here -> http://bit.ly/2iTPv01
