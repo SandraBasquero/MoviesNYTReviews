@@ -174,9 +174,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //print("select row \(indexPath[1])")
-        let currentCell = tableView.cellForRow(at: indexPath)! as! MovieListCell
+        //let currentCell = tableView.cellForRow(at: indexPath)! as! MovieListCell
         //print("select row \(currentCell.titleMovie.text)")
-        performSegue(withIdentifier: "toDetailSegue", sender: currentCell)
+        let selectedMovie:Movie = self.moviesArrayResult[indexPath[1]] as! Movie
+        //let dataPackage:NSArray = [currentCell, selectedMovie]
+        performSegue(withIdentifier: "toDetailSegue", sender: selectedMovie)
     }
 
     
@@ -189,11 +191,18 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         backItem.title = "Back"
         navigationItem.backBarButtonItem = backItem
         
+        //-- getting the url to send it to DetailVC ---
+        //let dataPackage:NSArray = sender as! NSArray
+        let movie:Movie = sender as! Movie
+        let theLink:NSData = movie.link! as NSData
+        print(theLink)
+        //-- getting the url to send it to DetailVC ---
+        
         if segue.identifier == "toDetailSegue" {
             if let viewController = segue.destination as? DetailVC {
-                let cellSel: MovieListCell = sender as! MovieListCell
-                viewController.navigationItem.title = cellSel.titleMovie.text
-                viewController.subtitleFromList = cellSel.subtitleMovie.text
+                //let cellSel: MovieListCell = dataPackage[0] as! MovieListCell
+                viewController.navigationItem.title = movie.displayTitle
+                viewController.subtitleFromList = movie.summaryShort
             }
         }
     }
