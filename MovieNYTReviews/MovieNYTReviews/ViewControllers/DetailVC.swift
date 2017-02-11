@@ -15,13 +15,14 @@ class DetailVC: UIViewController {
     var subtitleFromList:String?
     
     @IBOutlet weak var articleWebView: UIWebView!
+    var urlString = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.subtitleDetail.text = subtitleFromList
         
-        let url = NSURL (string: "http://www.nytimes.com/2017/02/02/movies/review-i-am-not-your-negro-review-james-baldwin.html")
+        let url = NSURL (string: urlString)
         let requestObj = URLRequest(url: url! as URL)
         self.articleWebView.loadRequest(requestObj)
         
