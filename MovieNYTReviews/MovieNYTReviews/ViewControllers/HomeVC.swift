@@ -136,8 +136,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
             cell.titleMovie.text = moviesArrayResult[indexPath.row].value(forKey: "displayTitle") as! String?
             let headline = moviesArrayResult[indexPath.row].value(forKey: "headline") as! String?
             cell.subtitleMovie.text = headline?.substring(from: 8)
-            cell.subtitleMovie.numberOfLines = 0
-            cell.subtitleMovie.adjustsFontSizeToFitWidth = true
+            //cell.subtitleMovie.numberOfLines = 0
+            //cell.subtitleMovie.adjustsFontSizeToFitWidth = true
             
             // Set image movie in table cell WITHOUT CACHE - v.1
             /*DispatchQueue.global().async {

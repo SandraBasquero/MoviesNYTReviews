@@ -28,13 +28,11 @@ class DetailVC: UIViewController {
         super.viewDidLoad()
         
         self.activity.startAnimating()
-        
         self.subtitleDetail.text = subtitleFromList
         
         let url = NSURL (string: urlString)
         let requestObj = URLRequest(url: url! as URL)
         //self.articleWebView.loadRequest(requestObj)
-
         loadURL(requestObj, completion:{
             success in
             self.activity.stopAnimating()
