@@ -26,6 +26,7 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationTitleStyle()
         
         self.activity.startAnimating()
         self.subtitleDetail.text = subtitleFromList
@@ -42,6 +43,18 @@ class DetailVC: UIViewController {
     func loadURL(_ url: URLRequest, completion:(Bool?)->Void) {
         self.articleWebView.loadRequest(url)
         completion(true)
+    }
+    
+    func navigationTitleStyle() {
+        let frame = CGRect(x: 0, y: 0, width: 200, height: 40)
+        let tlabel = UILabel(frame: frame)
+        tlabel.text = navigationItem.title
+        tlabel.textColor = UIColor.black
+        tlabel.font = UIFont(name: "System", size: 18.0)
+        tlabel.backgroundColor = UIColor.clear
+        tlabel.adjustsFontSizeToFitWidth = true
+        tlabel.textAlignment = .center
+        self.navigationItem.titleView = tlabel
     }
 
 }

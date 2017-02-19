@@ -73,6 +73,12 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
             print("Filling array from local CoreData")
             loadingFromCoreData()
         }
+        
+       /* let attributes = [
+            NSForegroundColorAttributeName: UIColor.black,
+            NSFontAttributeName: UIFont(name: "Avenir", size: 20)!
+        ]
+        self.navigationController?.navigationBar.titleTextAttributes = attributes*/
     }
     
     // Fill arrays with Core Data info and reload tableView
