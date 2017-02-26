@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B63F8DED1E635BC9009F41B5 /* cheltenham-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B63F8DEC1E635BC9009F41B5 /* cheltenham-regular.ttf */; };
+		B63F8DEF1E635E77009F41B5 /* cheltenham-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B63F8DEE1E635E77009F41B5 /* cheltenham-bold.ttf */; };
+		B63F8DF11E636397009F41B5 /* Imperial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B63F8DF01E636397009F41B5 /* Imperial.ttf */; };
 		B6D6A5251E1FFA4D00480F96 /* icon-default-film.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D6A5241E1FFA4D00480F96 /* icon-default-film.png */; };
 		B6EF7F0F1E06932200DA796F /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EF7F0E1E06932200DA796F /* ApiManager.swift */; };
 		EB07B4111E0D30C9003987EF /* DATAStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB07B4101E0D30C9003987EF /* DATAStack.framework */; };
@@ -65,6 +68,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B63F8DEC1E635BC9009F41B5 /* cheltenham-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cheltenham-regular.ttf"; sourceTree = "<group>"; };
+		B63F8DEE1E635E77009F41B5 /* cheltenham-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "cheltenham-bold.ttf"; sourceTree = "<group>"; };
+		B63F8DF01E636397009F41B5 /* Imperial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Imperial.ttf; sourceTree = "<group>"; };
 		B6D6A5241E1FFA4D00480F96 /* icon-default-film.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-default-film.png"; sourceTree = "<group>"; };
 		B6EF7F0E1E06932200DA796F /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = MovieNYTReviews/ApiManager.swift; sourceTree = SOURCE_ROOT; };
 		EB07B4101E0D30C9003987EF /* DATAStack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DATAStack.framework; path = Carthage/Build/iOS/DATAStack.framework; sourceTree = "<group>"; };
@@ -119,6 +125,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B63F8DEB1E635BC9009F41B5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B63F8DF01E636397009F41B5 /* Imperial.ttf */,
+				B63F8DEE1E635E77009F41B5 /* cheltenham-bold.ttf */,
+				B63F8DEC1E635BC9009F41B5 /* cheltenham-regular.ttf */,
+			);
+			name = fonts;
+			path = MovieNYTReviews/fonts;
+			sourceTree = "<group>";
+		};
 		B6D6A5231E1FFA4D00480F96 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +177,7 @@
 		EBE462711E01491300ADF6C1 = {
 			isa = PBXGroup;
 			children = (
+				B63F8DEB1E635BC9009F41B5 /* fonts */,
 				EBE4627C1E01491300ADF6C1 /* MovieNYTReviews */,
 				EBE462941E01491300ADF6C1 /* MovieNYTReviewsTests */,
 				EBE4629F1E01491300ADF6C1 /* MovieNYTReviewsUITests */,
@@ -322,8 +340,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D6A5251E1FFA4D00480F96 /* icon-default-film.png in Resources */,
+				B63F8DED1E635BC9009F41B5 /* cheltenham-regular.ttf in Resources */,
+				B63F8DF11E636397009F41B5 /* Imperial.ttf in Resources */,
 				EBE4628B1E01491300ADF6C1 /* LaunchScreen.storyboard in Resources */,
 				EBE462881E01491300ADF6C1 /* Assets.xcassets in Resources */,
+				B63F8DEF1E635E77009F41B5 /* cheltenham-bold.ttf in Resources */,
 				EBE462831E01491300ADF6C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

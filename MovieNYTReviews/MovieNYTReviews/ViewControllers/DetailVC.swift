@@ -50,7 +50,7 @@ class DetailVC: UIViewController {
         let tlabel = UILabel(frame: frame)
         tlabel.text = navigationItem.title
         tlabel.textColor = UIColor.black
-        tlabel.font = UIFont(name: "System", size: 18.0)
+        tlabel.font = UIFont(name: "Cheltenham", size: 23.0)
         tlabel.backgroundColor = UIColor.clear
         tlabel.adjustsFontSizeToFitWidth = true
         tlabel.textAlignment = .center
