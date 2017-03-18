@@ -45,7 +45,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q6K-EM-HpL" id="7TI-Iz-jql">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Of1-jR-SL8">
@@ -168,9 +168,8 @@
                                 <rect key="frame" x="0.0" y="126" width="375" height="541"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="buk-UK-AAa">
-                                <rect key="frame" x="178" y="311" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="buk-UK-AAa">
+                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -179,9 +178,13 @@
                             <constraint firstItem="cOA-k6-a2B" firstAttribute="leading" secondItem="xb9-oi-NXZ" secondAttribute="leading" id="DWh-2R-15b"/>
                             <constraint firstItem="eKF-HX-2lf" firstAttribute="leading" secondItem="xb9-oi-NXZ" secondAttribute="leading" id="N4J-oa-2tJ"/>
                             <constraint firstAttribute="trailing" secondItem="eKF-HX-2lf" secondAttribute="trailing" id="WPz-K0-RDI"/>
+                            <constraint firstAttribute="trailing" secondItem="buk-UK-AAa" secondAttribute="trailing" id="Zlw-mU-XNE"/>
                             <constraint firstItem="cOA-k6-a2B" firstAttribute="top" secondItem="oaO-0W-Sv5" secondAttribute="bottom" id="aPt-ot-kV7"/>
+                            <constraint firstItem="buk-UK-AAa" firstAttribute="top" secondItem="cOA-k6-a2B" secondAttribute="bottom" id="crc-Cw-Zcw"/>
                             <constraint firstItem="eKF-HX-2lf" firstAttribute="top" secondItem="cOA-k6-a2B" secondAttribute="bottom" constant="2" id="ePE-ry-MSg"/>
+                            <constraint firstItem="Uc7-P9-nfH" firstAttribute="top" secondItem="buk-UK-AAa" secondAttribute="bottom" id="evT-aQ-7jM"/>
                             <constraint firstAttribute="trailing" secondItem="cOA-k6-a2B" secondAttribute="trailing" id="njm-gh-ZRy"/>
+                            <constraint firstItem="buk-UK-AAa" firstAttribute="leading" secondItem="xb9-oi-NXZ" secondAttribute="leading" id="wg1-sh-DjF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -200,7 +203,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HOb-7O-MPU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1ER-aa-j46">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ER-aa-j46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
