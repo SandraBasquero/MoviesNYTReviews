@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class DetailVC: UIViewController, UIWebViewDelegate {
     
     @IBOutlet weak var subtitleDetail: UILabel!

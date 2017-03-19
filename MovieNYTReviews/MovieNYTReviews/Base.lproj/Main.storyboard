@@ -154,37 +154,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOA-k6-a2B">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5F1-35-Xgt">
                                 <rect key="frame" x="0.0" y="44" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="cOA-k6-a2B">
+                                        <rect key="frame" x="15" y="3" width="345" height="74"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Imperial-" family="Imperial" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="jAJ-nY-3p8"/>
+                                    <constraint firstAttribute="bottom" secondItem="cOA-k6-a2B" secondAttribute="bottom" constant="3" id="OdH-ee-Bwl"/>
+                                    <constraint firstItem="cOA-k6-a2B" firstAttribute="leading" secondItem="5F1-35-Xgt" secondAttribute="leading" constant="15" id="WCF-jX-8MM"/>
+                                    <constraint firstItem="cOA-k6-a2B" firstAttribute="top" secondItem="5F1-35-Xgt" secondAttribute="top" constant="3" id="aC1-v3-rPn"/>
+                                    <constraint firstAttribute="height" constant="80" id="l2j-3T-dex"/>
+                                    <constraint firstAttribute="trailing" secondItem="cOA-k6-a2B" secondAttribute="trailing" constant="15" id="vue-X3-gKc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Imperial-" family="Imperial" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKF-HX-2lf">
-                                <rect key="frame" x="0.0" y="126" width="375" height="541"/>
+                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="buk-UK-AAa">
-                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Uc7-P9-nfH" firstAttribute="top" secondItem="eKF-HX-2lf" secondAttribute="bottom" id="6PW-H6-T6E"/>
-                            <constraint firstItem="cOA-k6-a2B" firstAttribute="leading" secondItem="xb9-oi-NXZ" secondAttribute="leading" id="DWh-2R-15b"/>
                             <constraint firstItem="eKF-HX-2lf" firstAttribute="leading" secondItem="xb9-oi-NXZ" secondAttribute="leading" id="N4J-oa-2tJ"/>
+                            <constraint firstAttribute="trailing" secondItem="5F1-35-Xgt" secondAttribute="trailing" id="STl-Ch-h2J"/>
+                            <constraint firstItem="5F1-35-Xgt" firstAttribute="top" secondItem="oaO-0W-Sv5" secondAttribute="bottom" id="WPp-5j-T1h"/>
                             <constraint firstAttribute="trailing" secondItem="eKF-HX-2lf" secondAttribute="trailing" id="WPz-K0-RDI"/>
                             <constraint firstAttribute="trailing" secondItem="buk-UK-AAa" secondAttribute="trailing" id="Zlw-mU-XNE"/>
-                            <constraint firstItem="cOA-k6-a2B" firstAttribute="top" secondItem="oaO-0W-Sv5" secondAttribute="bottom" id="aPt-ot-kV7"/>
-                            <constraint firstItem="buk-UK-AAa" firstAttribute="top" secondItem="cOA-k6-a2B" secondAttribute="bottom" id="crc-Cw-Zcw"/>
-                            <constraint firstItem="eKF-HX-2lf" firstAttribute="top" secondItem="cOA-k6-a2B" secondAttribute="bottom" constant="2" id="ePE-ry-MSg"/>
                             <constraint firstItem="Uc7-P9-nfH" firstAttribute="top" secondItem="buk-UK-AAa" secondAttribute="bottom" id="evT-aQ-7jM"/>
-                            <constraint firstAttribute="trailing" secondItem="cOA-k6-a2B" secondAttribute="trailing" id="njm-gh-ZRy"/>
+                            <constraint firstItem="buk-UK-AAa" firstAttribute="top" secondItem="5F1-35-Xgt" secondAttribute="bottom" constant="1" id="lwM-cH-YsW"/>
+                            <constraint firstItem="eKF-HX-2lf" firstAttribute="top" secondItem="5F1-35-Xgt" secondAttribute="bottom" constant="1" id="wLw-6P-xlG"/>
                             <constraint firstItem="buk-UK-AAa" firstAttribute="leading" secondItem="xb9-oi-NXZ" secondAttribute="leading" id="wg1-sh-DjF"/>
+                            <constraint firstItem="5F1-35-Xgt" firstAttribute="leading" secondItem="xb9-oi-NXZ" secondAttribute="leading" id="wjo-oY-Fj9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -203,7 +213,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HOb-7O-MPU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ER-aa-j46">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1ER-aa-j46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
