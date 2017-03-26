@@ -35,6 +35,9 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     var jsonPagin = 0
     var moviesArrayResult:[NSManagedObject] = []
     var imageFilmsArrayResult:[NSManagedObject] = []
+    var searchBarActive : Bool = false
+    var moviesSearchBarResult:Array<NSManagedObject>?
+    var textToFiltre: NSString?
     var imagesCache:NSCache<AnyObject, AnyObject>! //Learned here -> http://bit.ly/2iGHWJZ
     lazy var refreshControl: UIRefreshControl = {  //Learned here -> http://bit.ly/2iTPv01
         let refreshControl = UIRefreshControl()
@@ -183,6 +186,48 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         performSegue(withIdentifier: "toDetailSegue", sender: selectedMovie)
     }
 
+    
+    //*********************************************************
+    // MARK: Search Bar Filter
+    //*********************************************************
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBarActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBarActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBarActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBarActive = false;
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        moviesSearchBarResult = moviesArrayResult.filter({ (textToFiltre) -> Bool in
+            
+            //print(">>>>>>>> \(textToFiltre)")
+            
+            return true //Bool(restaurant.type.contains("sushi"))
+            
+            
+            /*let tmp: NSString = textToFiltre
+            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return true //range.location != NSNotFound*/
+        })
+        if(moviesSearchBarResult?.count == 0){
+            searchBarActive = false;
+        } else {
+            searchBarActive = true;
+        }
+        self.tableMovies.reloadData()
+    }
+    
     
     //*********************************************************
     // MARK: Navigation
