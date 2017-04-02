@@ -209,22 +209,31 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        moviesSearchBarResult = moviesArrayResult.filter({ (textToFiltre) -> Bool in
-            
-            //print(">>>>>>>> \(textToFiltre)")
-            
-            return true //Bool(restaurant.type.contains("sushi"))
-            
-            
-            /*let tmp: NSString = textToFiltre
-            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-            return true //range.location != NSNotFound*/
-        })
-        if(moviesSearchBarResult?.count == 0){
-            searchBarActive = false;
-        } else {
-            searchBarActive = true;
+//        moviesSearchBarResult = moviesArrayResult.filter({ (textToFiltre) -> Bool in
+//            
+//            print(">>>>>>>> \(textToFiltre)")
+//            
+//            //let tmp: NSString = textToFiltre
+//            //let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+//            return true //range.location != NSNotFound*/
+//        })
+//        if(moviesSearchBarResult?.count == 0){
+//            searchBarActive = false;
+//        } else {
+//            searchBarActive = true;
+//        }
+        
+        moviesSearchBarResult = moviesArrayResult.filter() {
+            if let type = ($0 as! Movie).displayTitle as String? {
+                //return contains(type, textToFiltre)
+                print(">>>> \(type)")
+                //return type.contains(textToFiltre as! String)
+                return true
+            } else {
+                return false
+            }
         }
+        
         self.tableMovies.reloadData()
     }
     
