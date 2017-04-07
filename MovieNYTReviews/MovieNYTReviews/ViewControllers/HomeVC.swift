@@ -130,54 +130,67 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     //*********************************************************
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if moviesArrayResult.count != 0{
-            return moviesArrayResult.count
-        }else{
-            return 0
+        if searchBarActive {
+            return (moviesSearchBarResult?.count)!
+        } else {
+            if moviesArrayResult.count != 0{
+                return moviesArrayResult.count
+            }else{
+                return 0
+            }
         }
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieListCell
         //print(indexPath.row)
-        if moviesArrayResult.count > 0 {
-            // Set title and headline movie in table cell
-            cell.titleMovie.text = moviesArrayResult[indexPath.row].value(forKey: "displayTitle") as! String?
-            let headline = moviesArrayResult[indexPath.row].value(forKey: "headline") as! String?
-            cell.subtitleMovie.text = headline?.substring(from: 8)
-            //cell.subtitleMovie.numberOfLines = 0
-            //cell.subtitleMovie.adjustsFontSizeToFitWidth = true
-            
-            // Set image movie in table cell WITHOUT CACHE - v.1
-            /*DispatchQueue.global().async {
-                let multi = NSKeyedUnarchiver.unarchiveObject(with: self.moviesArrayResult[indexPath.row].value(forKey: "multimedia") as! Data)
-                var source = multi as! Dictionary<String, Any>
-                let url:URL = URL(string: source["src"] as! String)!
+        if searchBarActive {
+            cell.titleMovie.text = moviesSearchBarResult?[indexPath.row].value(forKey: "displayTitle") as! String?
+        } else {
+            if moviesArrayResult.count > 0 {
+                // Set title and headline movie in table cell
+                cell.titleMovie.text = moviesArrayResult[indexPath.row].value(forKey: "displayTitle") as! String?
+                let headline = moviesArrayResult[indexPath.row].value(forKey: "headline") as! String?
+                cell.subtitleMovie.text = headline?.substring(from: 8)
+                //cell.subtitleMovie.numberOfLines = 0
+                //cell.subtitleMovie.adjustsFontSizeToFitWidth = true
                 
-                if let data = NSData(contentsOf: url){
+                // Set image movie in table cell WITHOUT CACHE - v.1
+                /*DispatchQueue.global().async {
+                 let multi = NSKeyedUnarchiver.unarchiveObject(with: self.moviesArrayResult[indexPath.row].value(forKey: "multimedia") as! Data)
+                 var source = multi as! Dictionary<String, Any>
+                 let url:URL = URL(string: source["src"] as! String)!
+                 
+                 if let data = NSData(contentsOf: url){
+                 DispatchQueue.main.async {
+                 cell.imageMovie.image = UIImage(data: data as Data)
+                 self.tableMovies.isScrollEnabled = true
+                 }
+                 }
+                 }*/
+                
+                // Set image movie in table cell WITH CACHE
+                if self.imagesCache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) != nil {
+                    // Use cache
+                    //print("Cached image used, no need to download it")
+                    cell.imageMovie?.image = self.imagesCache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) as? UIImage
+                } else {
+                    // Not use cache. Take image from local Core Data
                     DispatchQueue.main.async {
-                        cell.imageMovie.image = UIImage(data: data as Data)
-                        self.tableMovies.isScrollEnabled = true
+                        let img:UIImage! = UIImage(data: self.imageFilmsArrayResult[indexPath.row].value(forKey: "image") as! Data)
+                        cell.imageMovie?.image = img
+                        //Set cache image to use it from now on
+                        self.imagesCache.setObject(img, forKey: (indexPath as NSIndexPath).row as AnyObject)
                     }
                 }
-            }*/
-            
-            // Set image movie in table cell WITH CACHE
-            if self.imagesCache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) != nil {
-                // Use cache
-                //print("Cached image used, no need to download it")
-                cell.imageMovie?.image = self.imagesCache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) as? UIImage
-            } else {
-                // Not use cache. Take image from local Core Data
-                DispatchQueue.main.async {
-                    let img:UIImage! = UIImage(data: self.imageFilmsArrayResult[indexPath.row].value(forKey: "image") as! Data)
-                    cell.imageMovie?.image = img
-                    //Set cache image to use it from now on
-                    self.imagesCache.setObject(img, forKey: (indexPath as NSIndexPath).row as AnyObject)
-                }
+                self.tableMovies.isScrollEnabled = true
             }
-            self.tableMovies.isScrollEnabled = true
         }
+        
         return cell
     }
     
@@ -225,15 +238,26 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         
         moviesSearchBarResult = moviesArrayResult.filter() {
             if let type = ($0 as! Movie).displayTitle as String? {
-                //return contains(type, textToFiltre)
-                print(">>>> \(type)")
-                //return type.contains(textToFiltre as! String)
-                return true
+                
+//                type = type.lowercased()
+//                return type.contains(searchText.lowercased())
+                
+                //probando esto...
+                let tmp: NSString = type as NSString
+                let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+                return range.location != NSNotFound
+                
             } else {
                 return false
             }
         }
         
+        if(moviesSearchBarResult?.count == 0){
+            searchBarActive = false;
+        } else {
+            searchBarActive = true;
+        }
+
         self.tableMovies.reloadData()
     }
     
