@@ -150,6 +150,11 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         //print(indexPath.row)
         if searchBarActive {
             cell.titleMovie.text = moviesSearchBarResult?[indexPath.row].value(forKey: "displayTitle") as! String?
+            let headline = moviesSearchBarResult?[indexPath.row].value(forKey: "headline") as! String?
+            cell.subtitleMovie.text = headline?.substring(from: 8)
+            
+            //cell.imageMovie?.image = self.imagesCache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) as? UIImage
+            
         } else {
             if moviesArrayResult.count > 0 {
                 // Set title and headline movie in table cell
@@ -221,21 +226,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-//        moviesSearchBarResult = moviesArrayResult.filter({ (textToFiltre) -> Bool in
-//            
-//            print(">>>>>>>> \(textToFiltre)")
-//            
-//            //let tmp: NSString = textToFiltre
-//            //let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-//            return true //range.location != NSNotFound*/
-//        })
-//        if(moviesSearchBarResult?.count == 0){
-//            searchBarActive = false;
-//        } else {
-//            searchBarActive = true;
-//        }
-        
         moviesSearchBarResult = moviesArrayResult.filter() {
             if let type = ($0 as! Movie).displayTitle as String? {
                 
@@ -246,11 +236,19 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
                 let tmp: NSString = type as NSString
                 let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
                 return range.location != NSNotFound
-                
             } else {
                 return false
             }
         }
+        
+        //Debuggg -------
+        print("Total: \(moviesSearchBarResult?.count)")
+        for mv: Movie in moviesSearchBarResult as! Array<Movie> {
+            print("result: \(mv.displayTitle)")
+            print("old img position ---> \(moviesArrayResult.index(of: mv))")
+            print("position in result array NOW -> \(moviesSearchBarResult?.index(of: mv))")
+        }
+        //Debuggg -------
         
         if(moviesSearchBarResult?.count == 0){
             searchBarActive = false;
