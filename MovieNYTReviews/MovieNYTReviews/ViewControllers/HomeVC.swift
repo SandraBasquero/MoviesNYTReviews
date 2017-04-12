@@ -149,20 +149,21 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieListCell
         //print(indexPath.row)
         if searchBarActive {
+            //Title and headline
             cell.titleMovie.text = moviesSearchBarResult?[indexPath.row].value(forKey: "displayTitle") as! String?
             let headline = moviesSearchBarResult?[indexPath.row].value(forKey: "headline") as! String?
             cell.subtitleMovie.text = headline?.substring(from: 8)
             
-            //cell.imageMovie?.image = self.imagesCache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) as? UIImage
-            
+            //Images
+            let tempArray:Array<NSManagedObject> = moviesSearchBarResult!;
+            let positionInMoviesArray = moviesArrayResult.index(of: tempArray[indexPath.row])
+            self.renderImage(atIndex: positionInMoviesArray!, inCell: cell)
         } else {
             if moviesArrayResult.count > 0 {
                 // Set title and headline movie in table cell
                 cell.titleMovie.text = moviesArrayResult[indexPath.row].value(forKey: "displayTitle") as! String?
                 let headline = moviesArrayResult[indexPath.row].value(forKey: "headline") as! String?
                 cell.subtitleMovie.text = headline?.substring(from: 8)
-                //cell.subtitleMovie.numberOfLines = 0
-                //cell.subtitleMovie.adjustsFontSizeToFitWidth = true
                 
                 // Set image movie in table cell WITHOUT CACHE - v.1
                 /*DispatchQueue.global().async {
@@ -179,19 +180,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
                  }*/
                 
                 // Set image movie in table cell WITH CACHE
-                if self.imagesCache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) != nil {
-                    // Use cache
-                    //print("Cached image used, no need to download it")
-                    cell.imageMovie?.image = self.imagesCache.object(forKey: (indexPath as NSIndexPath).row as AnyObject) as? UIImage
-                } else {
-                    // Not use cache. Take image from local Core Data
-                    DispatchQueue.main.async {
-                        let img:UIImage! = UIImage(data: self.imageFilmsArrayResult[indexPath.row].value(forKey: "image") as! Data)
-                        cell.imageMovie?.image = img
-                        //Set cache image to use it from now on
-                        self.imagesCache.setObject(img, forKey: (indexPath as NSIndexPath).row as AnyObject)
-                    }
-                }
+                self.renderImage(atIndex: indexPath.row, inCell: cell)
                 self.tableMovies.isScrollEnabled = true
             }
         }
@@ -228,11 +217,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         moviesSearchBarResult = moviesArrayResult.filter() {
             if let type = ($0 as! Movie).displayTitle as String? {
-                
-//                type = type.lowercased()
-//                return type.contains(searchText.lowercased())
-                
-                //probando esto...
                 let tmp: NSString = type as NSString
                 let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
                 return range.location != NSNotFound
@@ -240,15 +224,6 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
                 return false
             }
         }
-        
-        //Debuggg -------
-        print("Total: \(moviesSearchBarResult?.count)")
-        for mv: Movie in moviesSearchBarResult as! Array<Movie> {
-            print("result: \(mv.displayTitle)")
-            print("old img position ---> \(moviesArrayResult.index(of: mv))")
-            print("position in result array NOW -> \(moviesSearchBarResult?.index(of: mv))")
-        }
-        //Debuggg -------
         
         if(moviesSearchBarResult?.count == 0){
             searchBarActive = false;
@@ -277,6 +252,27 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
                 viewController.navigationItem.title = movie.displayTitle
                 viewController.subtitleFromList = movie.summaryShort
                 viewController.urlString = link["url"]!
+            }
+        }
+    }
+    
+    //*********************************************************
+    // MARK: Utils
+    //*********************************************************
+    
+    func renderImage(atIndex index: Int, inCell cell:MovieListCell) {
+        // Set image movie in table cell WITH CACHE
+        if self.imagesCache.object(forKey: index as AnyObject) != nil {
+            // Use cache
+            //print("Cached image used, no need to download it")
+            cell.imageMovie?.image = self.imagesCache.object(forKey: index as AnyObject) as? UIImage
+        } else {
+            // Not use cache. Take image from local Core Data
+            DispatchQueue.main.async {
+                let img:UIImage! = UIImage(data: self.imageFilmsArrayResult[index].value(forKey: "image") as! Data)
+                cell.imageMovie?.image = img
+                //Set cache image to use it from now on
+                self.imagesCache.setObject(img, forKey: index as AnyObject)
             }
         }
     }
