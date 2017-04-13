@@ -189,7 +189,8 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedMovie:Movie = self.moviesArrayResult[indexPath[1]] as! Movie
+        let arraySelected = searchBarActive ? moviesSearchBarResult : moviesArrayResult
+        let selectedMovie:Movie = arraySelected![indexPath.row] as! Movie
         performSegue(withIdentifier: "toDetailSegue", sender: selectedMovie)
     }
 
