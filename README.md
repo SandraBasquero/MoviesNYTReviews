@@ -1,2 +1,2 @@
 # MoviesNYTReviews
-Native app showing The New York Times movie reviews (ongoing project)
+Little native iOS app to read the latest movie reviews published by The New York Times.
