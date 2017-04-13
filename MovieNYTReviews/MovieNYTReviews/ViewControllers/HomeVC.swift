@@ -61,6 +61,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         self.tableMovies.dataSource = self
         tableMovies.isScrollEnabled = false
         self.syncActivity.startAnimating()
+        navigationTitleStyle()
         
         if ApiManager.sharedInstance.internetStatus() != .notReachable {
             ApiManager.sharedInstance.getJSONs(jsonPagin, remoteHandler: {
@@ -276,6 +277,19 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
                 self.imagesCache.setObject(img, forKey: index as AnyObject)
             }
         }
+    }
+    
+    // Title style
+    func navigationTitleStyle() {
+        let frame = CGRect(x: 0, y: 0, width: 200, height: 40)
+        let tlabel = UILabel(frame: frame)
+        tlabel.text = navigationItem.title
+        tlabel.textColor = UIColor.black
+        tlabel.font = UIFont(name: "Cheltenham", size: 23.0)
+        tlabel.backgroundColor = UIColor.clear
+        tlabel.adjustsFontSizeToFitWidth = true
+        tlabel.textAlignment = .center
+        self.navigationItem.titleView = tlabel
     }
     
 }
