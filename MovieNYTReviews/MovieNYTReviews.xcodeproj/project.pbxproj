@@ -81,7 +81,7 @@
 		EBD235F51E0169A100C99070 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		EBD235FA1E016E2700C99070 /* MovieListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 		EBD235FC1E016F4000C99070 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
-		EBE4627A1E01491300ADF6C1 /* MovieNYTReviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieNYTReviews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE4627A1E01491300ADF6C1 /* Movie Reviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Reviews.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE4627D1E01491300ADF6C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE462821E01491300ADF6C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBE462851E01491300ADF6C1 /* MovieNYTReviews.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieNYTReviews.xcdatamodel; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		EBE4627B1E01491300ADF6C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EBE4627A1E01491300ADF6C1 /* MovieNYTReviews.app */,
+				EBE4627A1E01491300ADF6C1 /* Movie Reviews.app */,
 				EBE462911E01491300ADF6C1 /* MovieNYTReviewsTests.xctest */,
 				EBE4629C1E01491300ADF6C1 /* MovieNYTReviewsUITests.xctest */,
 			);
@@ -248,7 +248,7 @@
 			);
 			name = MovieNYTReviews;
 			productName = MovieNYTReviews;
-			productReference = EBE4627A1E01491300ADF6C1 /* MovieNYTReviews.app */;
+			productReference = EBE4627A1E01491300ADF6C1 /* Movie Reviews.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EBE462901E01491300ADF6C1 /* MovieNYTReviewsTests */ = {
@@ -538,7 +538,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sandra.MovieNYTReviews;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Movie Reviews";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -557,7 +557,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sandra.MovieNYTReviews;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Movie Reviews";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
