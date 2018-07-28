@@ -1,5 +1,5 @@
-github "Alamofire/Alamofire" "4.2.0"
-github "SyncDB/DATAStack" "7.0.1"
+github "Alamofire/Alamofire" "4.7.3"
+github "SyncDB/DATAStack" "7.0.3"
 github "SyncDB/SYNCPropertyMapper" "5.2.0"
-github "SwiftyJSON/SwiftyJSON" "3.1.4"
+github "SwiftyJSON/SwiftyJSON" "4.1.0"
 github "SyncDB/Sync" "2.7.0"
